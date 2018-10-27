@@ -23,6 +23,7 @@
     "next": "^7.0.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "semantic-ui-react": "^0.83.0"
+    "semantic-ui-react": "^0.83.0",
+    "styled-components": "^4.0.2"
   }
 }
