@@ -4,11 +4,10 @@ import { Container, Header, Card, Icon, Image, Grid } from 'semantic-ui-react'
 import MenuDefault from '../components/menu/menu.js'
 
 const containerStyle = {
-    marginBottom: "50px"
+    marginBottom: "50px",
 }
 
 const gridStyle = {
-    backgroundImage: "/static/about/service-background.png",
     marginTop: "10px"
 }
 
@@ -17,12 +16,12 @@ const AboutUs = () => (
         <MenuDefault />
         <Grid style={gridStyle}>
             <Container fluid style={containerStyle}>
-                <Image src='/static/about/banner-background.png' fluid/>
+                <Image src='/static/about/banner-background.png' id='about-banner' fluid/>
             </Container>
-            <Container fluid>
+            <Container fluid style={containerStyle}>
                 <Image src='/static/about/video.png' centered/>
             </Container>
-            <Container fluid text textAlign='center'>
+            <Container fluid text textAlign='center' style={containerStyle}>
                 <Header>หน้าวีสวยอย่างเป็นธรรมชาติ</Header>
                 <p>
                 Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วนต่างๆในร่างกาย Microfat คือการนำไขมันของตนเองมาผสมกับ สเต็มเซลล์และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้า หรือเติมเต็ม Microfat คือการนำไขมัน ของตนเองมาผสมกับสเต็มเซลล์และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วนต่างๆในร่างกาย Microfat คือการนำไขมัน ของตนเองมาผสมกับ สเต็มเซลล์และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้า หรือเติมเต็มสัดส่วนต่างๆในร่างกาย Microfat คือการนำไขมันของ
@@ -33,13 +32,13 @@ const AboutUs = () => (
     ตนเองมาผสมกับ สเต็มเซลล์และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้า หรือเติมเต็มสัดส่วนต่างๆในร่างกาย Microfat คือการนำไขมันMicrofat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วนต่างๆในร่างกาย Microfat คือการนำไขมันของตนเองมาผสมกับ สเต็มเซลล์และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้า หรือเติมเต็ม Microfat คือการนำไขมัน
                 </p>
             </Container>
-            <Container textAlign='center'>
+            <Container textAlign='center' style={containerStyle}>
                 <Header>Why us ?</Header>
-                <Grid column={3} columns='equal'>
+                <Grid column={3} columns='equal' stackable>
                     <Grid.Row>
                         <Grid.Column>
                             <Card centered>
-                                <Image src='/static/about/whyus.png'/>
+                                <Image src='/static/about/whyus.png' size='medium' circular/>
                                 <Card.Content>
                                     <Card.Header>แพทย์มือหนึ่ง เชี่ยวชาญ เชื่อถือได้</Card.Header>
                                 </Card.Content>
@@ -47,7 +46,7 @@ const AboutUs = () => (
                         </Grid.Column>
                         <Grid.Column>
                             <Card centered>
-                                <Image src='/static/about/whyus.png'/>
+                                <Image src='/static/about/whyus.png' circular/>
                                 <Card.Content>
                                     <Card.Header>แพทย์มือหนึ่ง เชี่ยวชาญ เชื่อถือได้</Card.Header>
                                 </Card.Content>
@@ -55,7 +54,7 @@ const AboutUs = () => (
                         </Grid.Column>
                         <Grid.Column>
                             <Card centered>
-                                <Image src='/static/about/whyus.png'/>
+                                <Image src='/static/about/whyus.png' circular/>
                                 <Card.Content>
                                     <Card.Header>แพทย์มือหนึ่ง เชี่ยวชาญ เชื่อถือได้</Card.Header>
                                 </Card.Content>
