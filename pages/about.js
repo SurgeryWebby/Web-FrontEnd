@@ -1,10 +1,11 @@
 import React from 'react'
 import 'semantic-ui-css/semantic.min.css'
-import { Container, Header, Card, Icon, Image, Grid } from 'semantic-ui-react'
+import { Container, Header, Card, Icon, Image, Grid, Rail, Segment } from 'semantic-ui-react'
 import MenuDefault from '../components/menu/menu.js'
+import '../css/index.css'
 
 const containerStyle = {
-    marginBottom: "50px",
+    marginBottom: "40px",
 }
 
 const gridStyle = {
@@ -16,12 +17,12 @@ const AboutUs = () => (
         <MenuDefault />
         <Grid style={gridStyle}>
             <Container fluid style={containerStyle}>
-                <Image src='/static/about/banner-background.png' id='about-banner' fluid/>
+                <Image src='/static/about/banner-background.png' fluid></Image>
             </Container>
             <Container fluid style={containerStyle}>
                 <Image src='/static/about/video.png' centered/>
             </Container>
-            <Container fluid text textAlign='center' style={containerStyle}>
+            <Container fluid text textAlign='center' style={containerStyle} id='service'>
                 <Header>หน้าวีสวยอย่างเป็นธรรมชาติ</Header>
                 <p>
                 Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วนต่างๆในร่างกาย Microfat คือการนำไขมันของตนเองมาผสมกับ สเต็มเซลล์และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้า หรือเติมเต็ม Microfat คือการนำไขมัน ของตนเองมาผสมกับสเต็มเซลล์และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วนต่างๆในร่างกาย Microfat คือการนำไขมัน ของตนเองมาผสมกับ สเต็มเซลล์และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้า หรือเติมเต็มสัดส่วนต่างๆในร่างกาย Microfat คือการนำไขมันของ

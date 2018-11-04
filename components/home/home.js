@@ -1,27 +1,27 @@
 import React from 'react'
 import 'semantic-ui-css/semantic.min.css'
-import { Container, Header, Card, Icon, Image, Grid } from 'semantic-ui-react'
+import { Container, Header, Card, Icon, Image, Grid, Segment } from 'semantic-ui-react'
 import MenuDefault from '../menu/menu.js'
-import ServiceBackgroundImage from '../../static/home/service-background.png'
+import FooterDefault from '../footer/footer.js'
+import '../../css/index.css'
 
-const serviceContainerStyle = {
-    background: `url(${ServiceBackgroundImage})`
-}
 
 const Home = () => (
     <div>
         <MenuDefault />
         {/* Banner */}
         <Container fluid>
-            <Image src='/static/home/banner.png' fluid/>
+            <Image src='/static/home/banner2.png' fluid/>
         </Container>
         <Grid>
-            <Container style={serviceContainerStyle}>
+            <Container fluid >
+                <Image src='/static/home/service-background.png'/>
                 {/* Service Header */}
                 {/* Service Body */}
                 {/* See more */}
             </Container>
-            <Container>
+            <Container fluid>
+                <Image src='/static/home/promotion-blog-background.png'/>
                 {/* Promotion Picture */}
                 {/* Promotion Header */}
                 {/* Promotion Body */}
@@ -33,7 +33,7 @@ const Home = () => (
                 {/* See More */}
             </Container>
         </Grid>
-        {/* Footer */}
+        <FooterDefault/>
     </div>
 )
 

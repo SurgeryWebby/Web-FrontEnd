@@ -1,39 +1,11 @@
 import React, { Component } from 'react'
 import { Menu, Segment, Container, Grid, Button, Divider, Icon, Label, Image, Responsive, GridRow, GridColumn } from 'semantic-ui-react'
 
-const HOME = 'Home'
-const PACKAGE = 'Package'
-const BLOG = 'Blog'
-const ABOUTUS = 'About Us'
-const FAQ = 'FAQ'
-
-const menuStyle = {
-  borderColor: "white",
-  marginTop: "0px",
-  paddingBottom: "10px"
+const gridStyle = {
+    backgroundColor: "#857664",
 }
 
-const topMenuStyle = {
-  backgroundColor: "#857664",
-  marginBottom: "0px",
-  paddingBottom: "5px"
-}
-
-const loginStyle = {
-  backgroundColor: "#C39D5C",
-  marginTop: "10px",
-  marginBottom: "0px"
-}
-
-const gridRowMenuStyle = {
-  paddingTop: "0px"
-}
-
-const gridColumnTopMenu = {
-  paddingTop: "5px"
-}
-
-class MenuDefault extends Component {
+class FooterDefault extends Component {
     state = { activeItem: 'home' }
   
     handleItemClick = (e, { name }) => this.setState({ activeItem: name })
@@ -42,20 +14,11 @@ class MenuDefault extends Component {
       const { activeItem } = this.state
   
       return (
-          <Grid>
-            <GridRow style={topMenuStyle}>
-              <Container size='small'>
-                <Grid columns='equal' style={gridColumnTopMenu}>
-                  <GridColumn floated='left'>
-                    <font color='white'>0833109505</font>&nbsp;&nbsp;|&nbsp;<Icon link name='facebook f' inverted></Icon>   
-                  </GridColumn>
-                  <GridColumn floated='right' textAlign='right'>
-                    <font color='white'>EN</font>&nbsp;&nbsp;|&nbsp;<font color='white'>TH</font>
-                  </GridColumn>
-                </Grid>
-              </Container>
-            </GridRow>
-            <GridRow style={gridRowMenuStyle}>
+          <Grid style={gridStyle} textAlign='center'>
+              <GridColumn width={3}>Test</GridColumn>
+              <GridColumn width={6}>Test</GridColumn>
+              <GridColumn width={3}>Test</GridColumn>
+            {/* <GridRow style={gridRowMenuStyle}>
               <Container>
                 <Menu pointing secondary borderless stackable size='small' style={menuStyle}>
                   <Container>
@@ -75,11 +38,11 @@ class MenuDefault extends Component {
                   </Container>
                 </Menu>
               </Container>
-            </GridRow>
+            </GridRow> */}
           </Grid>
           
       )
     }
   }
 
-export default MenuDefault
+export default FooterDefault
