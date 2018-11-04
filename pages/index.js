@@ -1,6 +1,8 @@
+import Home from '../components/home/home.js'
+
 const Index = () => (
   <div>
-    <p>Hello Next.js</p>
+    <Home />
   </div>
 )
 

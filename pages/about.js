@@ -1,11 +1,18 @@
 import React from 'react'
 import 'semantic-ui-css/semantic.min.css'
 import { Container, Header, Card, Icon, Image, Grid } from 'semantic-ui-react'
+import MenuDefault from '../components/menu/menu.js'
 
 const AboutUs = () => (
     <div>
-        <Container fluid textAlign='center'>About us</Container>
-        <Container fluid textAlign='center'>Video</Container>
+        <MenuDefault />
+        {/* Fucking navbar */}
+        <Container fluid>
+            <Image src='/static/about/header.png' fluid/>
+        </Container>
+        <Container fluid>
+            <Image src='/static/about/video.png' centered/>
+        </Container>
         <Container fluid text textAlign='center'>
             <Header>หน้าวีสวยอย่างเป็นธรรมชาติ</Header>
             <p>
@@ -20,26 +27,26 @@ const AboutUs = () => (
         <Container textAlign='center'>
             <Header>Why us ?</Header>
             <Grid column={3} columns='equal'>
-                <Grid.Row textAlign='center'>
+                <Grid.Row>
                     <Grid.Column>
-                        <Card>
-                            <Image src='https://react.semantic-ui.com/images/wireframe/image.png'/>
+                        <Card centered>
+                            <Image src='/static/about/whyus.png'/>
                             <Card.Content>
                                 <Card.Header>แพทย์มือหนึ่ง เชี่ยวชาญ เชื่อถือได้</Card.Header>
                             </Card.Content>
                         </Card>
                     </Grid.Column>
                     <Grid.Column>
-                        <Card>
-                            <Image src='https://react.semantic-ui.com/images/wireframe/image.png'/>
+                        <Card centered>
+                            <Image src='/static/about/whyus.png'/>
                             <Card.Content>
                                 <Card.Header>แพทย์มือหนึ่ง เชี่ยวชาญ เชื่อถือได้</Card.Header>
                             </Card.Content>
                         </Card>
                     </Grid.Column>
                     <Grid.Column>
-                        <Card>
-                            <Image src='https://react.semantic-ui.com/images/wireframe/image.png'/>
+                        <Card centered>
+                            <Image src='/static/about/whyus.png'/>
                             <Card.Content>
                                 <Card.Header>แพทย์มือหนึ่ง เชี่ยวชาญ เชื่อถือได้</Card.Header>
                             </Card.Content>
@@ -49,10 +56,10 @@ const AboutUs = () => (
                 
             </Grid>
         </Container>
-        {/* Banner */}
-        {/* Video */}
-        {/* Content */}
-        {/* Why us */}
+        {/* footer */}
+        <Container>
+
+        </Container>
     </div>
 )
 
