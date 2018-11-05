@@ -7,30 +7,28 @@ const BLOG = 'Blog'
 const ABOUTUS = 'About Us'
 const FAQ = 'FAQ'
 
-const menuStyle = {
-  borderColor: "white",
-  marginTop: "0px",
+const gridColumnTopMenu = {
+  paddingTop: "5px"
 }
-
 const topMenuStyle = {
   backgroundColor: "#857664",
   marginBottom: "0px",
   paddingBottom: "5px"
 }
 
+const gridRowMenuStyle = {
+  paddingTop: "0px"
+}
+const menuStyle = {
+  borderColor: "white",
+  marginTop: "0px",
+}
 const loginStyle = {
   backgroundColor: "#C39D5C",
   marginTop: "10px",
   marginBottom: "0px"
 }
 
-const gridRowMenuStyle = {
-  paddingTop: "0px"
-}
-
-const gridColumnTopMenu = {
-  paddingTop: "5px"
-}
 
 class MenuDefault extends Component {
     state = { activeItem: 'home' }
