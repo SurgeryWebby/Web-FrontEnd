@@ -6,12 +6,8 @@ import MenuDefault from '../components/menu/menu.js'
 const { Column, Row } = Grid
 
 // TODO Move to css maybe or styled components
-const containerStyle = {
-    marginBottom: "40px",
-}
-
 const gridStyle = {
-    marginTop: "10px"
+    paddingBottom: "0px"
 }
 
 const contentContainerStyle = {
@@ -21,22 +17,46 @@ const contentContainerStyle = {
     backgroundSize: "cover"
 }
 
+const bannerSegmentStyle = {
+    padding: "0px"
+}
+
+const headerTextOverlayStyle = {
+    backgroundImage: 'url("/static/images/about/header-background.png")',
+    backgroundSize: "cover",
+    width: "300px",
+    height: "100px",
+    bottom: "10px",
+    position: "absolute"
+}
+
+const containerStyle = {
+    marginBottom: "40px",
+}
+
 const AboutUs = () => (
     <Grid>
-        <Row>
+        <Row style={gridStyle}>
             <Container fluid>
                 <Image src='/static/images/about/banner-background.png' fluid></Image>
+                    <Rail internal size='massive' position='left'>
+                        <Grid>
+                            <Row style={headerTextOverlayStyle}>
+                                <Header style={{ margin: "auto"}}>About Us</Header>
+                            </Row>
+                        </Grid>
+                    </Rail>
             </Container>
         </Row>
         <Row style={contentContainerStyle}>
             <Grid>
                 <Row>
-                    <Container fluid>
+                    <Container>
                         <Image src='/static/images/about/video.png' centered/>
                     </Container>
                 </Row>
                 <Row>
-                    <Container fluid text textAlign='center'>
+                    <Container text textAlign='center'>
                         <Header>หน้าวีสวยอย่างเป็นธรรมชาติ</Header>
                         <p>
                             Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ 
@@ -65,28 +85,28 @@ const AboutUs = () => (
                         <Grid column={3} columns='equal' stackable>
                             <Row>
                                 <Column>
-                                    <Card centered>
-                                        <Image src='/static/images/about/whyus.png' size='medium' circular/>
-                                        <Card.Content>
-                                            <Card.Header>แพทย์มือหนึ่ง เชี่ยวชาญ เชื่อถือได้</Card.Header>
-                                        </Card.Content>
-                                    </Card>
+                                    <Container textAlign='center'>
+                                        <Image centered circular src='/static/images/about/whyus2.png' size='small'/>
+                                        <div>
+                                        <p>แพทย์มือหนึ่ง เชี่ยวชาญ เชื่อถือได้</p>
+                                        </div>
+                                    </Container>
                                 </Column>
                                 <Column>
-                                    <Card centered>
-                                        <Image src='/static/images/about/whyus.png' circular/>
-                                        <Card.Content>
-                                            <Card.Header>รับประกันความปลอดภัยจากคลีนิคชั้นนำ</Card.Header>
-                                        </Card.Content>
-                                    </Card>
+                                    <Container textAlign='center'>
+                                        <Image centered circular src='/static/images/about/whyus2.png' size='small'/>
+                                        <div>
+                                        <p>แพทย์มือหนึ่ง เชี่ยวชาญ เชื่อถือได้</p>
+                                        </div>
+                                    </Container>
                                 </Column>
                                 <Column>
-                                    <Card centered>
-                                        <Image src='/static/images/about/whyus.png' circular/>
-                                        <Card.Content>
-                                            <Card.Header>ยินดีให้คำปรึกษาทุกข้อกังวลใจ</Card.Header>
-                                        </Card.Content>
-                                    </Card>
+                                    <Container textAlign='center'>
+                                        <Image centered circular src='/static/images/about/whyus2.png' size='small'/>
+                                        <div>
+                                        <p>แพทย์มือหนึ่ง เชี่ยวชาญ เชื่อถือได้</p>
+                                        </div>
+                                    </Container>
                                 </Column>
                             </Row>
                         </Grid>

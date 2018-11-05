@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import { Menu, Segment, Container, Grid, Button, Divider, Icon, Label, Image, Responsive, GridRow, GridColumn } from 'semantic-ui-react'
+import { Menu, Segment, Container, Grid, Button, Divider, Icon, Label, Image, Responsive } from 'semantic-ui-react'
+
+const { Column, Row } = Grid
 
 const HOME = 'Home'
 const PACKAGE = 'Package'
@@ -7,7 +9,7 @@ const BLOG = 'Blog'
 const ABOUTUS = 'About Us'
 const FAQ = 'FAQ'
 
-const gridColumnTopMenu = {
+const ColumnTopMenu = {
   paddingTop: "5px"
 }
 const topMenuStyle = {
@@ -31,7 +33,7 @@ const loginStyle = {
 
 
 class MenuDefault extends Component {
-    state = { activeItem: 'home' }
+    state = { activeItem: HOME }
   
     handleItemClick = (e, { name }) => this.setState({ activeItem: name })
   
@@ -40,24 +42,24 @@ class MenuDefault extends Component {
   
       return (
           <Grid>
-            <GridRow style={topMenuStyle}>
+            <Row style={topMenuStyle}>
               <Container size='small'>
-                <Grid columns='equal' style={gridColumnTopMenu}>
-                  <GridColumn floated='left'>
+                <Grid columns='equal' style={ColumnTopMenu}>
+                  <Column floated='left'>
                     <font color='white'>0833109505</font>&nbsp;&nbsp;|&nbsp;<Icon link name='facebook f' inverted></Icon>   
-                  </GridColumn>
-                  <GridColumn floated='right' textAlign='right'>
+                  </Column>
+                  <Column floated='right' textAlign='right'>
                     <font color='white'>EN</font>&nbsp;&nbsp;|&nbsp;<font color='white'>TH</font>
-                  </GridColumn>
+                  </Column>
                 </Grid>
               </Container>
-            </GridRow>
-            <GridRow style={gridRowMenuStyle}>
+            </Row>
+            <Row style={gridRowMenuStyle}>
               <Container>
                 <Menu pointing secondary borderless stackable size='small' style={menuStyle}>
                   <Container>
                     <Menu.Item header>
-                      <Image size='mini' src='/static/menu/logo.png' style={{ marginRight: '1.5em' }} />
+                      <Image size='mini' src='/static/images/menu/logo.png' style={{ marginRight: '1.5em' }} />
                     </Menu.Item>
                     <Menu.Item name={HOME} active={activeItem === HOME} onClick={this.handleItemClick} />
                     <Menu.Item name={PACKAGE} active={activeItem === PACKAGE} onClick={this.handleItemClick} />
@@ -72,7 +74,7 @@ class MenuDefault extends Component {
                   </Container>
                 </Menu>
               </Container>
-            </GridRow>
+            </Row>
           </Grid>
           
       )
