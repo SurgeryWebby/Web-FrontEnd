@@ -3,25 +3,45 @@ import 'semantic-ui-css/semantic.min.css'
 import { Container, Header, Card, Icon, Image, Grid, Segment } from 'semantic-ui-react'
 import MenuDefault from '../menu/menu.js'
 import FooterDefault from '../footer/footer.js'
-import '../../css/index.css'
+import FaqsAccordions from '../faqs/FaqsAccordions'
+import MessengerMessageUs from 'react-messenger-message-us';
 
+import './index.css'
+
+const serviceContainerStyle = {
+    background: 'url("/static/images/home/service-background.png")',
+    backgroundRepeat: "repeat",
+    backgroundOrigin: "padding-box",
+    backgroundSize: "100%",
+    /* background-position: bottom; */
+    minHeight: "100vh"
+}
+
+const promotionBlogContainerStyle = {
+    background: 'url("/static/images/home/promotion-blog-background.png")',
+    backgroundRepeat: "repeat",
+    backgroundOrigin: "padding-box",
+    backgroundSize: "100%",
+    /* background-position: bottom; */
+    minHeight: "100vh"
+}
 
 const Home = () => (
     <div>
         <MenuDefault />
         {/* Banner */}
         <Container fluid>
-            <Image src='/static/home/banner2.png' fluid/>
+            <Image src='/static/images/home/banner2.png' fluid/>
         </Container>
         <Grid>
-            <Container fluid >
-                <Image src='/static/home/service-background.png'/>
+            <Container fluid style={serviceContainerStyle}>
+                {/* <Image src='/static/home/service-background.png'/> */}
                 {/* Service Header */}
                 {/* Service Body */}
                 {/* See more */}
             </Container>
-            <Container fluid>
-                <Image src='/static/home/promotion-blog-background.png'/>
+            <Container fluid style={promotionBlogContainerStyle}>
+                {/* <Image src='/static/images/home/promotion-blog-background.png'/> */}
                 {/* Promotion Picture */}
                 {/* Promotion Header */}
                 {/* Promotion Body */}
