@@ -8,7 +8,7 @@ import Banner from '../Base/Banner';
 const { Column, Row } = Grid;
 import './index.css';
 
-class BlogsComponent extends Component {
+class FaqsComponent extends Component {
   render() {
     return <Container fluid className="faqs-content">
         <Banner title="FAQs"/>
@@ -33,4 +33,4 @@ class BlogsComponent extends Component {
   }
 }
 
-export default BlogsComponent;
+export default FaqsComponent;
