@@ -10,7 +10,6 @@ const FAQ = 'FAQ'
 const menuStyle = {
   borderColor: "white",
   marginTop: "0px",
-  paddingBottom: "10px"
 }
 
 const topMenuStyle = {
@@ -64,9 +63,9 @@ class MenuDefault extends Component {
                     </Menu.Item>
                     <Menu.Item name={HOME} active={activeItem === HOME} onClick={this.handleItemClick} />
                     <Menu.Item name={PACKAGE} active={activeItem === PACKAGE} onClick={this.handleItemClick} />
-                    <Menu.Item name='Blog' active={activeItem === 'Blog'} onClick={this.handleItemClick} />
-                    <Menu.Item name='About Us' active={activeItem === 'About Us'} onClick={this.handleItemClick} />
-                    <Menu.Item name='FAQ' active={activeItem === 'FAQ'} onClick={this.handleItemClick} />
+                    <Menu.Item name={BLOG} active={activeItem === BLOG} onClick={this.handleItemClick} />
+                    <Menu.Item name={ABOUTUS} active={activeItem === ABOUTUS} onClick={this.handleItemClick} />
+                    <Menu.Item name={FAQ} active={activeItem === FAQ} onClick={this.handleItemClick} />
                     <Menu.Menu position='right'>
                       <Button size='small' style={loginStyle}>
                         <font color='white'>Log In</font>
