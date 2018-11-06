@@ -30,6 +30,10 @@ const headerTextOverlayStyle = {
     position: "absolute"
 }
 
+const railStyle = {
+    left: "15%",
+}
+
 const containerStyle = {
     marginBottom: "40px",
 }
@@ -39,10 +43,10 @@ const AboutUs = () => (
         <Row style={gridStyle}>
             <Container fluid>
                 <Image src='/static/images/about/banner-background.png' fluid></Image>
-                    <Rail internal size='massive' position='left'>
+                    <Rail internal size='massive' position='left' style={railStyle}>
                         <Grid>
                             <Row style={headerTextOverlayStyle}>
-                                <Header style={{ margin: "auto"}}>About Us</Header>
+                                <Header style={{ margin: "auto"}} size='large'>About Us</Header>
                             </Row>
                         </Grid>
                     </Rail>
@@ -81,32 +85,32 @@ const AboutUs = () => (
                 </Row>
                 <Row>
                     <Container textAlign='center' style={containerStyle}>
-                        <Header>Why us ?</Header>
+                        <Segment basic><Header size='huge'>Why us ?</Header></Segment>
                         <Grid column={3} columns='equal' stackable>
                             <Row>
                                 <Column>
-                                    <Container textAlign='center'>
+                                    <Container>
                                         <Image centered circular src='/static/images/about/whyus2.png' size='small'/>
-                                        <div>
-                                        <p>แพทย์มือหนึ่ง เชี่ยวชาญ เชื่อถือได้</p>
-                                        </div>
                                     </Container>
+                                    <Segment basic>
+                                        <Header size='large'>แพทย์มือหนึ่ง เชี่ยวชาญ เชื่อถือได้</Header>
+                                    </Segment>
                                 </Column>
                                 <Column>
-                                    <Container textAlign='center'>
+                                    <Container>
                                         <Image centered circular src='/static/images/about/whyus2.png' size='small'/>
-                                        <div>
-                                        <p>แพทย์มือหนึ่ง เชี่ยวชาญ เชื่อถือได้</p>
-                                        </div>
                                     </Container>
+                                    <Segment basic>
+                                        <Header size='large'>แพทย์มือหนึ่ง เชี่ยวชาญ เชื่อถือได้</Header>
+                                    </Segment>
                                 </Column>
                                 <Column>
-                                    <Container textAlign='center'>
+                                    <Container>
                                         <Image centered circular src='/static/images/about/whyus2.png' size='small'/>
-                                        <div>
-                                        <p>แพทย์มือหนึ่ง เชี่ยวชาญ เชื่อถือได้</p>
-                                        </div>
                                     </Container>
+                                    <Segment basic>
+                                        <Header size='large'>แพทย์มือหนึ่ง เชี่ยวชาญ เชื่อถือได้</Header>
+                                    </Segment>
                                 </Column>
                             </Row>
                         </Grid>
