@@ -125,7 +125,9 @@ const Home = () => (
             <Row>
                 <Container>
                     <Grid stackable centered columns='equal'>
-                    <Header style={headerPromotionBlogStyle} size='huge'>Blog</Header>
+                        <Container>
+                            <Header style={headerPromotionBlogStyle} size='huge'>Blog</Header>
+                        </Container>
                         <Row>
                             <Column>
                                 <Container>

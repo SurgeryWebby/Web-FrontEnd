@@ -29,10 +29,10 @@ class FooterDefault extends Component {
           <Grid stackable style={gridStyle} textAlign='center'>
             <Row>
               <Column width={3} verticalAlign='middle'>
-                  <Container>
-                    <Image size='mini' src='/static/images/menu/logo.png' style={{ marginRight: '1.5em' }} />
-                  </Container>
+                <Segment basic>
+                  <Image size='mini' src='/static/images/menu/logo.png' style={{ marginRight: '1.5em' }} />
                   <Container style={textStyle}>© Copyright 2018 ---, All Rights Reserved.</Container>
+                </Segment>
               </Column>
               <Column width={6} verticalAlign='middle'>
                 <Container textAlign='center'>
