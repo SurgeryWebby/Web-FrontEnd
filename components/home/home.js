@@ -3,7 +3,7 @@ import 'semantic-ui-css/semantic.min.css'
 import { Container, Header, Card, Icon, Image, Grid, Segment, Rail, Button } from 'semantic-ui-react'
 import MenuDefault from '../menu/menu.js'
 import FooterDefault from '../footer/footer.js'
-import './index.css'
+import WavyBannerSvg from '../Base/WavyBannerSvg.js'
 
 const { Column, Row } = Grid
 const { Group } = Card
@@ -22,16 +22,6 @@ const promotionBlogContainerStyle = {
 const gridStyle = {
     paddingTop: "0px",
     paddingBottom: "0px"
-}
-
-const headerTextOverlayStyle = {
-    backgroundImage: 'url("/static/images/home/banner-overlay-background.png")',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: "left",
-    width: "700px",
-    backgroundSize: "95%",
-    bottom: "0px",
-    position: "absolute"
 }
 
 const serviceStyle = {
@@ -58,11 +48,21 @@ const headerTextOverlayContainerStyle = {
     padding: "60px 120px 60px 120px"
 }
 
+const headerTextOverlayStyle = {
+    backgroundImage: 'url("/static/images/home/banner-overlay-background.png")',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: "left",
+    width: "700px",
+    backgroundSize: "95%",
+    bottom: "0px",
+    position: "absolute"
+}
+
 const Home = () => (
     <Grid>
         <Row style={gridStyle}>
             <Image src='/static/images/home/banner-background.png' fluid ></Image>
-            <Rail internal size='tiny' position='left' style={{ left: "5%" }}>
+            <Rail internal size='tiny' position='left' style={{ left: "5%", zIndex: "2" }}>
                 <Grid>
                     <Column only='computer tablet' style={headerTextOverlayStyle}>
                         <Container textAlign='justified' style={headerTextOverlayContainerStyle}>
@@ -77,6 +77,7 @@ const Home = () => (
                     </Column>
                 </Grid>
             </Rail>
+            <WavyBannerSvg/>
         </Row>
         <Row style={serviceContainerStyle} centered>
             <Container>

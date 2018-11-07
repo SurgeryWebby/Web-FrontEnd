@@ -13,12 +13,10 @@ class BlogsComponent extends Component {
   state = { activePage: 1 }
 
   handlePaginationChange = (e, { activePage }) => {
-    console.log(e, activePage);
     this.setState({ activePage })
   }
 
   render() {
-    console.log(blogs);
     const { activePage } = this.state;
     return <Container fluid>
       <Banner title="Blogs"/>
