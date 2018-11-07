@@ -18,7 +18,7 @@ const ColumnTopMenu = {
 const topMenuStyle = {
   backgroundColor: "#857664",
   marginBottom: "0px",
-  paddingBottom: "5px"
+  paddingBottom: "5px",
 }
 
 const gridRowMenuStyle = {
@@ -50,12 +50,12 @@ class MenuDefault extends Component {
   
       return (
           <Grid>
-            <Row only='large screen' style={topMenuStyle}>
-              <Container size='small'>
+            <Row only='computer tablet' style={topMenuStyle}>
+              <Container>
                 <Grid columns='equal' style={ColumnTopMenu} >
                   <Row verticalAlign='middle'>
-                    <Column floated='left'>
-                      <List horizontal divided inverted link>
+                    <Column floated='left' verticalAlign='middle'>
+                      <List horizontal divided inverted link verticalAlign='middle' floated='left'>
                         <List.Item style={{ color: "white"}}>
                           0812345678
                         </List.Item>
@@ -65,7 +65,7 @@ class MenuDefault extends Component {
                       </List>
                     </Column>
                     <Column floated='right' textAlign='right'>
-                      <List horizontal divided inverted link>
+                      <List horizontal divided inverted link verticalAlign='middle' floated='right'>
                         <List.Item as='a' href='#' active>EN</List.Item>
                         <List.Item as='a' href='#'>TH</List.Item>
                       </List>

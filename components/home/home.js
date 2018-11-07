@@ -3,6 +3,7 @@ import 'semantic-ui-css/semantic.min.css'
 import { Container, Header, Card, Icon, Image, Grid, Segment, Rail, Button } from 'semantic-ui-react'
 import MenuDefault from '../menu/menu.js'
 import FooterDefault from '../footer/footer.js'
+import './index.css'
 
 const { Column, Row } = Grid
 const { Group } = Card
@@ -36,7 +37,8 @@ const headerTextOverlayStyle = {
 const serviceStyle = {
     backgroundImage: 'url("/static/images/home/service-content-background.png")',
     backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center'
+    backgroundPosition: 'left',
+    backgroundSize: 'cover'
 }
 
 const serviceGrid = {
@@ -59,7 +61,7 @@ const headerTextOverlayContainerStyle = {
 const Home = () => (
     <Grid>
         <Row style={gridStyle}>
-            <Image src='/static/images/home/banner-background.png' fluid></Image>
+            <Image src='/static/images/home/banner-background.png' fluid ></Image>
             <Rail internal size='tiny' position='left' style={{ left: "5%" }}>
                 <Grid>
                     <Column only='computer tablet' style={headerTextOverlayStyle}>
