@@ -15,6 +15,7 @@ const serviceContainerStyle = {
 const promotionBlogContainerStyle = {
     background: 'url("/static/images/home/promotion-blog-background.png")',
     backgroundSize: "cover",
+    color: "white"
 }
 
 const gridStyle = {
@@ -42,6 +43,16 @@ const serviceGrid = {
     padding: 0
 }
 
+const seeMoreButtonStyle = {
+    backgroundColor: "#C39D5C",
+    color: "white"
+}
+
+const headerPromotionBlogStyle = {
+    color: "white"
+}
+
+
 const Home = () => (
     <Grid>
         <Row style={gridStyle}>
@@ -68,7 +79,6 @@ const Home = () => (
                     <Row>
                         <Container style={serviceStyle}>
                             <Grid container columns={3} doubling stackable >
-                                
                                 <Column style={serviceGrid}><Image src='/static/images/home/service-content-element.png' /></Column>
                                 <Column style={serviceGrid}><Image src='/static/images/home/service-content-element.png' /></Column>
                                 <Column style={serviceGrid}><Image src='/static/images/home/service-content-element.png' /></Column>
@@ -80,7 +90,7 @@ const Home = () => (
                     </Row>
                     <Row>
                         <Container>
-                            <Button>See More</Button>
+                        <Button content='See More' style={seeMoreButtonStyle}/>
                         </Container>
                     </Row>
                 </Grid>
@@ -91,23 +101,23 @@ const Home = () => (
                 <Container>
                     <Grid stackable centered columns='equal'>
                         <Row>
-                        <Column>
-                            <Container>
-                                <Image src='/static/images/home/service-content-element.png' size='big' centered/>    
-                            </Container>
-                        </Column>
-                        <Column>
-                            <Container>
-                                <Header>Promotion</Header>
-                                <p>
-                                หน้าวีสวยอย่างเป็นธรรมชาติ
-                                </p>
-                                <p>
-                                Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วน ต่างๆในร่างกาย Microfat คือการนำไขมันของตนเองมาผสมกับ
-                                </p>
-                                <Button>See More</Button>
-                            </Container>
-                        </Column>
+                            <Column>
+                                <Container>
+                                    <Image src='/static/images/home/service-content-element.png' size='big' centered/>    
+                                </Container>
+                            </Column>
+                            <Column>
+                                <Container>
+                                    <Header size='huge'>Promotion</Header>
+                                    <p>
+                                    หน้าวีสวยอย่างเป็นธรรมชาติ
+                                    </p>
+                                    <p>
+                                    Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วน ต่างๆในร่างกาย Microfat คือการนำไขมันของตนเองมาผสมกับ
+                                    </p>
+                                    <Button content='See More' style={seeMoreButtonStyle}/>
+                                </Container>
+                            </Column>
                         </Row> 
                     </Grid>
                 </Container>
@@ -115,53 +125,52 @@ const Home = () => (
             <Row>
                 <Container>
                     <Grid stackable centered columns='equal'>
-                    <Header>Blog</Header>
+                        <Container>
+                            <Header style={headerPromotionBlogStyle} size='huge'>Blog</Header>
+                        </Container>
                         <Row>
                             <Column>
                                 <Container>
                                     <Image src='/static/images/home/service-content-element.png' size='big' centered/>    
                                 </Container>
-                                <Container textAlign='center'>
-                                    <Header>Promotion</Header>
-                                    <p>
-                                    หน้าวีสวยอย่างเป็นธรรมชาติ
-                                    </p>
-                                    <p>
-                                    Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วน ต่างๆในร่างกาย Microfat คือการนำไขมันของตนเองมาผสมกับ
-                                    </p>
+                                <Container>
+                                    <Segment basic>
+                                        <Header style={headerPromotionBlogStyle} size='large'>สร้างกรอบหน้าให้ได้รูป สวยสมใจ</Header>
+                                        <p>
+                                        Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วน ต่างๆในร่างกาย Microfat คือการนำไขมันของตนเองมาผสมกับ
+                                        </p>
+                                    </Segment>
                                 </Container>
                             </Column>
                             <Column>
                                 <Container>
                                     <Image src='/static/images/home/service-content-element.png' size='big' centered/>    
                                 </Container>
-                                <Container textAlign='center'>
-                                    <Header>Promotion</Header>
-                                    <p>
-                                    หน้าวีสวยอย่างเป็นธรรมชาติ
-                                    </p>
-                                    <p>
-                                    Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วน ต่างๆในร่างกาย Microfat คือการนำไขมันของตนเองมาผสมกับ
-                                    </p>
+                                <Container>
+                                    <Segment basic>
+                                        <Header style={headerPromotionBlogStyle} size='large'>สร้างกรอบหน้าให้ได้รูป สวยสมใจ</Header>
+                                        <p>
+                                        Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วน ต่างๆในร่างกาย Microfat คือการนำไขมันของตนเองมาผสมกับ
+                                        </p>
+                                    </Segment>
                                 </Container>
                             </Column>
                             <Column>
                                 <Container >
                                     <Image src='/static/images/home/service-content-element.png' size='big' centered/>    
                                 </Container>
-                                <Container textAlign='center'>
-                                    <Header>Promotion</Header>
-                                    <p>
-                                    หน้าวีสวยอย่างเป็นธรรมชาติ
-                                    </p>
-                                    <p>
-                                    Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วน ต่างๆในร่างกาย Microfat คือการนำไขมันของตนเองมาผสมกับ
-                                    </p>
+                                <Container>
+                                    <Segment basic>
+                                        <Header style={headerPromotionBlogStyle} size='large'>สร้างกรอบหน้าให้ได้รูป สวยสมใจ</Header>
+                                        <p>
+                                        Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วน ต่างๆในร่างกาย Microfat คือการนำไขมันของตนเองมาผสมกับ
+                                        </p>
+                                    </Segment>
                                 </Container>
                             </Column>
                         </Row>
                         <Row>
-                            <Button>See More</Button>
+                            <Button content='See More' style={seeMoreButtonStyle}/>
                         </Row>
                     </Grid>
                 </Container>

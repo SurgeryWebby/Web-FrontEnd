@@ -52,7 +52,7 @@ class MenuDefault extends Component {
               <Container size='small'>
                 <Grid columns='equal' style={ColumnTopMenu}>
                   <Column floated='left'>
-                    <font color='white'>0833109505</font>&nbsp;&nbsp;|&nbsp;<Icon link name='facebook f' inverted></Icon>   
+                    <font color='white'>0833109505</font>&nbsp;&nbsp;|&nbsp;<Icon link name='facebook f' inverted></Icon>
                   </Column>
                   <Column floated='right' textAlign='right'>
                     <font color='white'>EN</font>&nbsp;&nbsp;|&nbsp;<font color='white'>TH</font>
