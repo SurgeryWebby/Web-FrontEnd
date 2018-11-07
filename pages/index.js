@@ -4,7 +4,7 @@ import Home from '../components/home/home.js'
 
 const Index = () => (
   <div>
-    <MenuDefault />
+    <MenuDefault activeItem='Home' />
     <Home />
     <FooterDefault/>
   </div>

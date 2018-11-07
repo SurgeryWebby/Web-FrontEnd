@@ -58,7 +58,7 @@ const Home = () => (
             </Container>
         </Row>
         <Row style={serviceContainerStyle}>
-            <Container centered>
+            <Container>
                 <Grid centered>
                     <Row>
                         <Container>

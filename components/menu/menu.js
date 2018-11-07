@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'next/link';
 import { Menu, Segment, Container, Grid, Button, Divider, Icon, Label, Image, Responsive } from 'semantic-ui-react'
 
 const { Column, Row } = Grid
@@ -35,7 +36,12 @@ const loginStyle = {
 class MenuDefault extends Component {
     state = { activeItem: HOME }
   
-    handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+    componentWillMount() {
+      const { activeItem } = this.props;
+      this.setState({activeItem})
+    }
+
+    handleItemClick = (e, { name }) => {}
   
     render() {
       const { activeItem } = this.state
@@ -61,11 +67,11 @@ class MenuDefault extends Component {
                     <Menu.Item header>
                       <Image size='mini' src='/static/images/menu/logo.png' style={{ marginRight: '1.5em' }} />
                     </Menu.Item>
-                    <Menu.Item name={HOME} active={activeItem === HOME} onClick={this.handleItemClick} />
+                    <Menu.Item as={Link} href="/" name={HOME} active={activeItem === HOME} onClick={this.handleItemClick} />
                     <Menu.Item name={PACKAGE} active={activeItem === PACKAGE} onClick={this.handleItemClick} />
-                    <Menu.Item name={BLOG} active={activeItem === BLOG} onClick={this.handleItemClick} />
-                    <Menu.Item name={ABOUTUS} active={activeItem === ABOUTUS} onClick={this.handleItemClick} />
-                    <Menu.Item name={FAQ} active={activeItem === FAQ} onClick={this.handleItemClick} />
+                    <Menu.Item as={Link} href="/blogs" name={BLOG} active={activeItem === BLOG} onClick={this.handleItemClick} />
+                    <Menu.Item as={Link} href="/about" name={ABOUTUS} active={activeItem === ABOUTUS} onClick={this.handleItemClick} />
+                    <Menu.Item as={Link} href="/faqs" name={FAQ} active={activeItem === FAQ} onClick={this.handleItemClick} />
                     <Menu.Menu position='right'>
                       <Button size='small' style={loginStyle}>
                         <font color='white'>Log In</font>
