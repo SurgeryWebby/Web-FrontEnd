@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Menu, Segment, Container, Grid, Button, Divider, Icon, Label, Image, Responsive, GridRow, GridColumn } from 'semantic-ui-react'
+import { Menu, Segment, Container, Grid, Button, Icon, Label, Image, Responsive, List, Divider } from 'semantic-ui-react'
 
 const { Column, Row } = Grid
 
@@ -11,6 +11,11 @@ const FAQ = 'FAQ'
 
 const gridStyle = {
     backgroundColor: "#857664",
+}
+
+const rowStyle = {
+  paddingTop: "0px",
+  paddingBottom: "0px"
 }
 
 const textStyle = {
@@ -27,14 +32,14 @@ class FooterDefault extends Component {
   
       return (
           <Grid stackable style={gridStyle} textAlign='center'>
-            <Row>
+            <Row style={rowStyle}>
               <Column width={3} verticalAlign='middle'>
                 <Segment basic>
                   <Image size='mini' src='/static/images/menu/logo.png' style={{ marginRight: '1.5em' }} />
                   <Container style={textStyle}>© Copyright 2018 ---, All Rights Reserved.</Container>
                 </Segment>
               </Column>
-              <Column width={6} verticalAlign='middle'>
+              <Column width={6} verticalAlign='middle' only='large screen'>
                 <Container textAlign='center'>
                   <Menu text compact size='huge'>
                     <Menu.Item name={HOME} active={activeItem === HOME} onClick={this.handleItemClick} style={textStyle}/>
@@ -47,7 +52,14 @@ class FooterDefault extends Component {
               </Column>
               <Column width={3} verticalAlign='middle'>
                   <Container>
-                    <font color='white'>0833109505</font>&nbsp;&nbsp;|&nbsp;<Icon link name='facebook f' inverted></Icon>
+                    <List horizontal divided inverted link>
+                      <List.Item style={{ color: "white"}}>
+                        0812345678
+                      </List.Item>
+                      <List.Item>
+                        <Icon link name='facebook f' inverted></Icon>
+                      </List.Item>
+                    </List>
                   </Container>
               </Column>
             </Row>
