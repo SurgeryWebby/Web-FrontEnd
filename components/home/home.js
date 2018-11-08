@@ -162,7 +162,7 @@ const Home = () => (
         </Row>
         <Grid style={promotionBlogContainerStyle}>
             <Row >
-                {/* <TopWavySvg /> */}
+                {/* <TopWavySvg /> Removed for now due to issue https://github.com/SurgeryWebby/Web-FrontEnd/issues/12 */}
                 <Container>
                     <Grid stackable centered columns='equal'>
                         <Row>
@@ -191,7 +191,6 @@ const Home = () => (
                                         <SeeMoreButton/>
                                     </Segment>
                                 </Container>
-                                
                             </Column>
                         </Row> 
                     </Grid>
