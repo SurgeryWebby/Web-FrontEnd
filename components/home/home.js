@@ -81,7 +81,7 @@ const BannerHeader = () => (
 )
 
 const BannerContent = () => (
-    <p class='home-banner-content'>Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วน</p>
+    <p className='home-banner-content'>Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วน</p>
 )
 
 const ServiceHeader = () => (
@@ -89,7 +89,7 @@ const ServiceHeader = () => (
 )
 
 const PromotionContent = () => (
-    <p class='home-promotion-content'>
+    <p className='home-promotion-content'>
         Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ และ
         ฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วน ต่างๆในร่างกาย
         Microfat คือการนำไขมันของตนเองมาผสมกับ
@@ -101,7 +101,7 @@ const PromotionHeader = () => (
 )
 
 const BlogContent = () => (
-    <p class='home-blog-content'>
+    <p className='home-blog-content'>
         Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วน ต่างๆในร่างกาย
         Microfat คือการนำไขมันของตนเองมาผสมกับ
     </p>
