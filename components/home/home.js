@@ -1,9 +1,8 @@
 import React from 'react'
 import 'semantic-ui-css/semantic.min.css'
-import { Container, Header, Card, Icon, Image, Grid, Segment, Rail, Button } from 'semantic-ui-react'
-import MenuDefault from '../menu/menu.js'
-import FooterDefault from '../footer/footer.js'
+import { Container, Header, Card, Image, Grid, Segment, Rail, Button } from 'semantic-ui-react'
 import WavyBannerSvg from '../Base/WavyBannerSvg.js'
+import TopWavySvg from '../Base/TopWavySvg.js'
 
 const { Column, Row } = Grid
 const { Group } = Card
@@ -16,12 +15,12 @@ const serviceContainerStyle = {
 const promotionBlogContainerStyle = {
     background: 'url("/static/images/home/promotion-blog-background.png")',
     backgroundSize: "cover",
-    color: "white"
+    color: "white",
+    padding: 0
 }
 
 const gridStyle = {
-    paddingTop: "0px",
-    paddingBottom: "0px"
+    padding: 0
 }
 
 const serviceStyle = {
@@ -58,6 +57,14 @@ const headerTextOverlayStyle = {
     position: "absolute"
 }
 
+const promotionHeaderImageStyle = {
+    position: 'absolute',
+    width: '30rem',
+    top: '-3rem',
+    left: '-10rem',
+    zIndex: 0
+}
+
 const Home = () => (
     <Grid>
         <Row style={gridStyle}>
@@ -81,7 +88,7 @@ const Home = () => (
         </Row>
         <Row style={serviceContainerStyle} centered>
             <Container>
-                <Grid centered>
+                <Grid centered style={{padding: 0}}>
                     <Row centered>
                         <Container>
                             <Header size='huge'>Service</Header>
@@ -109,6 +116,7 @@ const Home = () => (
         </Row>
         <Grid style={promotionBlogContainerStyle}>
             <Row >
+                <TopWavySvg />
                 <Container>
                     <Grid stackable centered columns='equal'>
                         <Row>
@@ -121,15 +129,15 @@ const Home = () => (
                             </Column>
                             <Column>
                                 <Container>
-                                    <Segment basic>
-                                        <Header size='huge'>Promotion</Header>
+                                    <Segment basic style={{ position: 'relative' }}>
+                                        <Header style={{zIndex: 1, position: 'relative', fontSize: 50}}>Promotion</Header>
+                                        <Image style={promotionHeaderImageStyle} src='/static/images/home/promotion-header-overlay-background.png' size='big' centered/>
                                     </Segment>
                                 </Container>
                                 <Container>
-                                    <Segment basic>
+                                    <Segment basic style={{paddingTop: 20}}>
                                         <Header size='large' style={headerPromotionBlogStyle}>หน้าวีสวยอย่างเป็นธรรมชาติ</Header>
                                         <p>Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วน ต่างๆในร่างกาย Microfat คือการนำไขมันของตนเองมาผสมกับ</p>
-                                        
                                     </Segment>
                                 </Container>
                                 <Container>
