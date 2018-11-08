@@ -1,7 +1,7 @@
 import React from 'react'
 import 'semantic-ui-css/semantic.min.css'
 import { Container, Header, Card, Icon, Image, Grid, Rail, Segment } from 'semantic-ui-react'
-import Banner from '../Base/Banner';
+import WavyBannerSvg from '../Base/WavyBannerSvg.js'
 
 // TODO Move to css maybe or styled components
 const { Column, Row } = Grid
@@ -27,12 +27,13 @@ const headerTextOverlayStyle = {
     backgroundSize: "cover",
     width: "300px",
     height: "100px",
-    bottom: "10px",
+    bottom: "60px",
     position: "absolute"
 }
 
 const railStyle = {
     left: "15%",
+    zIndex: "2"
 }
 
 const containerStyle = {
@@ -41,7 +42,18 @@ const containerStyle = {
 
 const AboutUs = () => (
     <Grid>
-        <Banner title="About us" />
+        <Row style={gridStyle}>
+            <Image src='/static/images/about/banner-background.png' fluid></Image>
+            <Rail internal size='massive' position='left' style={railStyle}>
+                <Grid>
+                    <Row style={headerTextOverlayStyle} verticalAlign='middle'>
+                        <Header style={{ margin: "auto"}} size='medium'>About Us</Header>
+                    </Row>
+                </Grid>
+            </Rail>
+            <WavyBannerSvg />
+        </Row>
+        {/* <Banner title="About us" /> */}
         <Row style={contentContainerStyle}>
             <Grid>
                 <Row>

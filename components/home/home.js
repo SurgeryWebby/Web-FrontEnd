@@ -3,6 +3,7 @@ import 'semantic-ui-css/semantic.min.css'
 import { Container, Header, Card, Icon, Image, Grid, Segment, Rail, Button } from 'semantic-ui-react'
 import MenuDefault from '../menu/menu.js'
 import FooterDefault from '../footer/footer.js'
+import WavyBannerSvg from '../Base/WavyBannerSvg.js'
 
 const { Column, Row } = Grid
 const { Group } = Card
@@ -19,24 +20,15 @@ const promotionBlogContainerStyle = {
 }
 
 const gridStyle = {
+    paddingTop: "0px",
     paddingBottom: "0px"
-}
-
-const headerTextOverlayStyle = {
-    backgroundImage: 'url("/static/images/home/banner-overlay-background.png")',
-    // backgroundSize: "cover",
-    backgroundRepeat: 'no-repeat',
-
-    bottom: "10px",
-    left: "100px",
-    position: "absolute"
 }
 
 const serviceStyle = {
     backgroundImage: 'url("/static/images/home/service-content-background.png")',
     backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    // minHeight: '100vh'
+    backgroundPosition: 'left',
+    backgroundSize: 'cover'
 }
 
 const serviceGrid = {
@@ -52,39 +44,58 @@ const headerPromotionBlogStyle = {
     color: "white"
 }
 
+const headerTextOverlayContainerStyle = {
+    padding: "60px 120px 60px 120px"
+}
+
+const headerTextOverlayStyle = {
+    backgroundImage: 'url("/static/images/home/banner-overlay-background.png")',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: "left",
+    width: "700px",
+    backgroundSize: "95%",
+    bottom: "0px",
+    position: "absolute"
+}
 
 const Home = () => (
     <Grid>
         <Row style={gridStyle}>
-            <Container fluid>
-                <Image src='/static/images/home/banner-background.png' fluid></Image>
-                    <Rail internal size='massive' position='left'>
-                        <Grid>
-                            <Column style={headerTextOverlayStyle}>
-                                <Container></Container>
-                                <Header style={{ margin: "auto"}}>About Us</Header>
-                            </Column>
-                        </Grid>
-                    </Rail>
-            </Container>
+            <Image src='/static/images/home/banner-background.png' fluid ></Image>
+            <Rail internal size='tiny' position='left' style={{ left: "5%", zIndex: "2" }}>
+                <Grid>
+                    <Column only='computer tablet' style={headerTextOverlayStyle}>
+                        <Container textAlign='justified' style={headerTextOverlayContainerStyle}>
+                            <Segment basic>
+                                <Header size='huge'>หน้าวีสวยอย่างเป็นธรรมชาติ</Header>
+                                <p>Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วน</p>
+                            </Segment>
+                            <Segment basic>
+                                <Button content='See More' style={seeMoreButtonStyle}/>
+                            </Segment>
+                        </Container>
+                    </Column>
+                </Grid>
+            </Rail>
+            <WavyBannerSvg/>
         </Row>
-        <Row style={serviceContainerStyle}>
+        <Row style={serviceContainerStyle} centered>
             <Container>
                 <Grid centered>
-                    <Row>
+                    <Row centered>
                         <Container>
-                            <Header>Service</Header>
+                            <Header size='huge'>Service</Header>
                         </Container>
                     </Row>
                     <Row>
-                        <Container style={serviceStyle}>
-                            <Grid container columns={3} doubling stackable >
-                                <Column style={serviceGrid}><Image src='/static/images/home/service-content-element.png' /></Column>
-                                <Column style={serviceGrid}><Image src='/static/images/home/service-content-element.png' /></Column>
-                                <Column style={serviceGrid}><Image src='/static/images/home/service-content-element.png' /></Column>
-                                <Column style={serviceGrid}><Image src='/static/images/home/service-content-element.png' /></Column>
-                                <Column style={serviceGrid}><Image src='/static/images/home/service-content-element.png' /></Column>
-                                <Column style={serviceGrid}><Image src='/static/images/home/service-content-element.png' /></Column>
+                        <Container style={serviceStyle} textAlign='center'>
+                            <Grid container columns={3} doubling stackable>
+                                <Column style={serviceGrid}><Image src='/static/images/home/service-content-element.png' centered/></Column>
+                                <Column style={serviceGrid}><Image src='/static/images/home/service-content-element.png' centered/></Column>
+                                <Column style={serviceGrid}><Image src='/static/images/home/service-content-element.png' centered/></Column>
+                                <Column style={serviceGrid}><Image src='/static/images/home/service-content-element.png' centered/></Column>
+                                <Column style={serviceGrid}><Image src='/static/images/home/service-content-element.png' centered/></Column>
+                                <Column style={serviceGrid}><Image src='/static/images/home/service-content-element.png' centered/></Column>
                             </Grid>
                         </Container>
                     </Row>
@@ -103,20 +114,30 @@ const Home = () => (
                         <Row>
                             <Column>
                                 <Container>
-                                    <Image src='/static/images/home/service-content-element.png' size='big' centered/>    
+                                    <Segment basic>
+                                        <Image src='/static/images/home/service-content-element.png' size='big' centered/>
+                                    </Segment>
                                 </Container>
                             </Column>
                             <Column>
                                 <Container>
-                                    <Header size='huge'>Promotion</Header>
-                                    <p>
-                                    หน้าวีสวยอย่างเป็นธรรมชาติ
-                                    </p>
-                                    <p>
-                                    Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วน ต่างๆในร่างกาย Microfat คือการนำไขมันของตนเองมาผสมกับ
-                                    </p>
-                                    <Button content='See More' style={seeMoreButtonStyle}/>
+                                    <Segment basic>
+                                        <Header size='huge'>Promotion</Header>
+                                    </Segment>
                                 </Container>
+                                <Container>
+                                    <Segment basic>
+                                        <Header size='large' style={headerPromotionBlogStyle}>หน้าวีสวยอย่างเป็นธรรมชาติ</Header>
+                                        <p>Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วน ต่างๆในร่างกาย Microfat คือการนำไขมันของตนเองมาผสมกับ</p>
+                                        
+                                    </Segment>
+                                </Container>
+                                <Container>
+                                    <Segment basic>
+                                        <Button content='See More' style={seeMoreButtonStyle}/>
+                                    </Segment>
+                                </Container>
+                                
                             </Column>
                         </Row> 
                     </Grid>
