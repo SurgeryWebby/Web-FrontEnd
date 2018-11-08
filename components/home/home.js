@@ -15,8 +15,11 @@ const serviceContainerStyle = {
 const promotionBlogContainerStyle = {
     background: 'url("/static/images/home/promotion-blog-background.png")',
     backgroundSize: "cover",
+    backgroundPosition: 'bottom',
     color: "white",
-    padding: 0
+    padding: 0,
+    paddingTop: 100,
+    position: 'relative'
 }
 
 const gridStyle = {
@@ -115,8 +118,8 @@ const Home = () => (
             </Container>
         </Row>
         <Grid style={promotionBlogContainerStyle}>
-            <Row >
-                <TopWavySvg />
+            <TopWavySvg className="banner-wave" />
+            <Row style={{position: 'relative'}}>
                 <Container>
                     <Grid stackable centered columns='equal'>
                         <Row>
@@ -145,9 +148,9 @@ const Home = () => (
                                         <Button content='See More' style={seeMoreButtonStyle}/>
                                     </Segment>
                                 </Container>
-                                
+
                             </Column>
-                        </Row> 
+                        </Row>
                     </Grid>
                 </Container>
             </Row>
@@ -160,7 +163,7 @@ const Home = () => (
                         <Row>
                             <Column>
                                 <Container>
-                                    <Image src='/static/images/home/service-content-element.png' size='big' centered/>    
+                                    <Image src='/static/images/home/service-content-element.png' size='big' centered/>
                                 </Container>
                                 <Container>
                                     <Segment basic>
@@ -173,7 +176,7 @@ const Home = () => (
                             </Column>
                             <Column>
                                 <Container>
-                                    <Image src='/static/images/home/service-content-element.png' size='big' centered/>    
+                                    <Image src='/static/images/home/service-content-element.png' size='big' centered/>
                                 </Container>
                                 <Container>
                                     <Segment basic>
@@ -186,7 +189,7 @@ const Home = () => (
                             </Column>
                             <Column>
                                 <Container >
-                                    <Image src='/static/images/home/service-content-element.png' size='big' centered/>    
+                                    <Image src='/static/images/home/service-content-element.png' size='big' centered/>
                                 </Container>
                                 <Container>
                                     <Segment basic>
