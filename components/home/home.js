@@ -153,7 +153,7 @@ const Home = () => (
                         </Container>
                     </Row>
                     <Row>
-                        <Container>
+                        <Container style={{ marginTop: 50 }}>
                             <SeeMoreButton/>
                         </Container>
                     </Row>
