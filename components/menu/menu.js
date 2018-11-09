@@ -111,7 +111,7 @@ class MenuDefault extends Component {
               <Menu.Item header>
                 <Image size='mini' src='/static/images/menu/logo.png' style={{ marginRight: '1.5em' }} />
               </Menu.Item>
-              <Menu.Item as={Link} href="/" name={HOME} active={activeItem === HOME} onClick={this.handleItemClick} className='.menu-item-active'/>
+              <Menu.Item as={Link} href="/" name={HOME} active={activeItem === HOME} onClick={this.handleItemClick}/>
               <Menu.Item name={PACKAGE} active={activeItem === PACKAGE} onClick={this.handleItemClick} />
               <Menu.Item as={Link} href="/blogs" name={BLOG} active={activeItem === BLOG} onClick={this.handleItemClick} />
               <Menu.Item as={Link} href="/about" name={ABOUTUS} active={activeItem === ABOUTUS} onClick={this.handleItemClick} />
