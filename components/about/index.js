@@ -72,11 +72,6 @@ const AboutUs = () => (
                             </Segment>
                         </Container>
                     </Column>
-                    {/* <Row style={headerTextOverlayStyle} verticalAlign='middle'>
-                        <Container style={BannerHeaderContainerStyle}>
-                            <BannerText/>
-                        </Container>
-                    </Row> */}
                 </Grid>
             </Rail>
             <WavyBannerSvg />

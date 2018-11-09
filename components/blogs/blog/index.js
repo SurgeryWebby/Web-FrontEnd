@@ -15,7 +15,7 @@ class BlogsComponent extends Component {
     const { contextRef } = this.state;
     return <Container>
         <div ref={this.handleContextRef}>
-            <Grid clumn={2}>
+            <Grid column={2}>
                 <Column mobile={16} computer={10}>
                     <BlogContent />
                 </Column>
