@@ -7,7 +7,11 @@ import BlogList from './BlogList';
 import Banner from '../Base/Banner';
 
 const blogs = require('./mock/blogs');
-const { Column } = Grid;
+const { Column, Row } = Grid;
+
+const TopRowStyle = {
+  paddingTop: 0
+}
 
 class BlogsComponent extends Component {
   state = { activePage: 1 }
@@ -20,25 +24,31 @@ class BlogsComponent extends Component {
 
   render() {
     const { activePage, contextRef } = this.state;
-    return <Container fluid>
-      <Banner title="Blogs"/>
-      <Container>
-        <div ref={this.handleContextRef}>
-          <Grid clumn={2}>
-              <Column mobile={16} computer={10}>
-                <BlogList blogs={blogs}
-                          activePage={activePage}
-                          handlePaginationChange={this.handlePaginationChange}/>
-              </Column>
-              <Column mobile={16} computer={6} >
-                  <Sticky context={contextRef}>
-                    <BlogRightSideContent />
-                  </Sticky>
-              </Column>
-          </Grid>
-        </div>
-      </Container>
-    </Container>
+    return (
+      <Grid>
+        <Row style={TopRowStyle}>
+          <Container fluid>
+            <Banner title="Blogs"/>
+            <Container>
+              <div ref={this.handleContextRef}>
+                <Grid clumn={2}>
+                    <Column mobile={16} computer={10}>
+                      <BlogList blogs={blogs}
+                                activePage={activePage}
+                                handlePaginationChange={this.handlePaginationChange}/>
+                    </Column>
+                    <Column mobile={16} computer={6} >
+                        <Sticky context={contextRef}>
+                          <BlogRightSideContent />
+                        </Sticky>
+                    </Column>
+                </Grid>
+              </div>
+            </Container>
+        </Container>
+        </Row>
+      </Grid>
+    )
   }
 }
 

@@ -8,7 +8,7 @@ const { Column, Row } = Grid
 
 // TODO Move to css maybe or styled components
 const gridStyle = {
-    paddingBottom: "0px"
+    paddingTop: 0
 }
 
 const contentContainerStyle = {
@@ -28,12 +28,12 @@ const headerTextOverlayStyle = {
     backgroundPosition: "left",
     backgroundSize: "100%",
     height: 150,
-    bottom: "10px",
+    bottom: "5%",
     position: "absolute"
 }
 
 const railStyle = {
-    left: "5%",
+    left: "10%",
     zIndex: "2",
     width: 450
 }

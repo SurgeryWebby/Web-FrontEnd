@@ -6,9 +6,10 @@ class FaqsAccordions extends Component {
     activeIndex: 0,
     accordions: [
       {
-        question: "What is a dog?",
-        answer: `A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can
-        be found as a welcome guest in many households across the world.`
+        question: "คำถาม?",
+        answer: `ไฟลท์ทริปไวกิ้ง อพาร์ตเมนต์แจ๊สด็อกเตอร์ วิทย์โบว์ โทรโข่งพะเรออพาร์ตเมนท์ ปักขคณนาคอนเซ็ปต์แพนด้าคันถธุระ 
+        ฟรุต ดิสเครดิต ไวอะกร้าเลคเชอร์ซาดิสต์ สโลว์วอลนัทซังเตติ๋ม ไฮเทคคอรัปชั่นซินโดรม สเตเดียมบอร์ดเวณิกาเฟอร์นิเจอร์ตื้บ 
+        มอยส์เจอไรเซอร์ เลสเบี้ยนอิกัวนาสแล็กสตรอว์เบอร์รี ธุหร่ำบิล รอยัลตี้แคปอึ้มไวอากร้า เอาท์กาญจน์คาร์โก้หน่อมแน้มตอกย้ำ`
       },{
         question: "What kinds of dogs are there?",
         answer: `There are many breeds of dogs. Each breed varies in size and temperament. Owners often
@@ -36,7 +37,8 @@ class FaqsAccordions extends Component {
     return <Accordion fluid styled>
             {
               accordions.map((a, index) => (<div key={`acc-${index}`}>
-                <Accordion.Title active={activeIndex === index} index={index} onClick={this.handleClick}>
+                <Accordion.Title active={activeIndex === index} index={index}
+                  onClick={this.handleClick} style={{ fontFamily: 'Prompt', fontSize: 16}}>
                   <Icon name='dropdown' />
                   {a.question}
                 </Accordion.Title>

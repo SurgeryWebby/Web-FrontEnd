@@ -28,7 +28,7 @@ const textStyle = {
 
 const LogoAndCopyRight = () => (
   <Segment basic>
-    <Container><Image size='mini' src='/static/images/menu/logo.png' style={{ marginRight: '1.5em' }} /></Container>
+    <Container><Image size='mini' src='/static/images/menu/logo.png' style={{ marginRight: '1.5em' }}/></Container>
     <Container style={{ color: 'white', fontFamily: 'ButlerRegular', fontSize: 10 }}>© Copyright 2018 ---, All Rights Reserved.</Container>
   </Segment>
 )
