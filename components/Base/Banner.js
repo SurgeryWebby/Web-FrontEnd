@@ -1,7 +1,7 @@
 import React from 'react';
 import { Segment, Image, Rail, Header } from 'semantic-ui-react';
 import WavyBannerSvg from './WavyBannerSvg.js'
-import './index.css';
+import './base.css';
 
 const HeaderStyle = {
     fontFamily: 'ButlerRegular',
