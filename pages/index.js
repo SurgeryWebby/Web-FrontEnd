@@ -7,7 +7,7 @@ const Index = () => (
     <style>
       @import url('https://fonts.googleapis.com/css?family=Chonburi|Prompt');
     </style>
-    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/butler" type="text/css"/> 
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/butler" type="text/css"/>
     <MenuDefault activeItem='Home' />
     <Home />
     <FooterDefault/>

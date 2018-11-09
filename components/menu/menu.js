@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'next/link';
 import { Menu, Segment, Container, Grid, Button, Divider, Icon, Label, Image, Responsive, List } from 'semantic-ui-react'
+import './index.css'
 
 const { Column, Row } = Grid
 
@@ -69,7 +70,6 @@ const LogInMenu = () => (
     <Segment basic style={{ paddingRight: 0, paddingTop: 0}}>
       <Button size='large' style={loginStyle} content='Log In'/>
     </Segment>
-    
   </Menu.Menu>
 )
 
@@ -111,7 +111,7 @@ class MenuDefault extends Component {
               <Menu.Item header>
                 <Image size='mini' src='/static/images/menu/logo.png' style={{ marginRight: '1.5em' }} />
               </Menu.Item>
-              <Menu.Item as={Link} href="/" name={HOME} active={activeItem === HOME} onClick={this.handleItemClick} />
+              <Menu.Item as={Link} href="/" name={HOME} active={activeItem === HOME} onClick={this.handleItemClick}/>
               <Menu.Item name={PACKAGE} active={activeItem === PACKAGE} onClick={this.handleItemClick} />
               <Menu.Item as={Link} href="/blogs" name={BLOG} active={activeItem === BLOG} onClick={this.handleItemClick} />
               <Menu.Item as={Link} href="/about" name={ABOUTUS} active={activeItem === ABOUTUS} onClick={this.handleItemClick} />

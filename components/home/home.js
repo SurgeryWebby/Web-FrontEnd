@@ -15,7 +15,7 @@ const serviceContainerStyle = {
 }
 
 const serviceStyle = {
-    backgroundImage: 'url("/static/images/home/service-content-background.png")',
+    // backgroundImage: 'url("/static/images/home/service-content-background.png")',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'left',
     backgroundSize: 'cover',
