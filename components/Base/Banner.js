@@ -14,6 +14,6 @@ export default ({title}) => (
             </Rail>
         </Segment>
     </Rail>
-    <WavyBannerSvg/>
+    <WavyBannerSvg />
 </Segment>
 )

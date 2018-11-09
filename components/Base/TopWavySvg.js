@@ -1,3 +1,5 @@
+import './index.css';
+
 const TopWavySvg = () => (
     <div className="head-wave" >
         <svg viewBox="0 0 500 150" preserveAspectRatio="none" style={{height: '100%', width: '100%'}}>
