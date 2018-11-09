@@ -18,42 +18,69 @@ const contentContainerStyle = {
     backgroundSize: "cover"
 }
 
-const bannerSegmentStyle = {
-    padding: "0px"
+const BannerHeaderContainerStyle = {
+    padding: "40px 60px 30px 120px"
 }
 
 const headerTextOverlayStyle = {
     backgroundImage: 'url("/static/images/about/header-background.png")',
-    backgroundSize: "cover",
-    width: "300px",
-    height: "100px",
-    bottom: "60px",
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: "left",
+    backgroundSize: "100%",
+    height: 150,
+    bottom: "10px",
     position: "absolute"
 }
 
 const railStyle = {
-    left: "15%",
-    zIndex: "2"
+    left: "5%",
+    zIndex: "2",
+    width: 450
 }
 
 const containerStyle = {
     marginBottom: "40px",
 }
 
+const WhyUsContentStyle = {
+    fontFamily: 'Chonburi',
+    fontSize: 24
+}
+
+const BannerText = () => (
+    <Header style={{ margin: "auto", fontFamily: 'ButlerRegular', fontSize: 48 }}>About Us</Header>
+)
+
+const ContentHeader = () => (
+    <Header style={{ fontFamily: 'Chonburi', fontSize: 32}}>หน้าวีสวยอย่างเป็นธรรมชาติ</Header>
+)
+
+const WhyUsHeader = () => (
+    <Header style={{ fontFamily: 'ButlerRegular', fontSize: 48 }}>Why Us ?</Header>
+)
+
 const AboutUs = () => (
     <Grid>
         <Row style={gridStyle}>
             <Image src='/static/images/about/banner-background.png' fluid></Image>
-            <Rail internal size='massive' position='left' style={railStyle}>
+            <Rail internal size='tiny' position='left' style={railStyle}>
                 <Grid>
-                    <Row style={headerTextOverlayStyle} verticalAlign='middle'>
-                        <Header style={{ margin: "auto"}} size='medium'>About Us</Header>
-                    </Row>
+                    <Column style={headerTextOverlayStyle} verticalAlign='middle' textAlign='center'>
+                        <Container textAlign='justified' style={BannerHeaderContainerStyle}>
+                            <Segment basic>
+                                <BannerText/>
+                            </Segment>
+                        </Container>
+                    </Column>
+                    {/* <Row style={headerTextOverlayStyle} verticalAlign='middle'>
+                        <Container style={BannerHeaderContainerStyle}>
+                            <BannerText/>
+                        </Container>
+                    </Row> */}
                 </Grid>
             </Rail>
             <WavyBannerSvg />
         </Row>
-        {/* <Banner title="About us" /> */}
         <Row style={contentContainerStyle}>
             <Grid>
                 <Row>
@@ -66,7 +93,7 @@ const AboutUs = () => (
                 <Row>
                     <Container textAlign='center'>
                         <Segment basic>
-                            <Header size='huge'>หน้าวีสวยอย่างเป็นธรรมชาติ</Header>
+                            <ContentHeader/>
                         </Segment>
                         <Segment basic>
                             Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ 
@@ -91,7 +118,9 @@ const AboutUs = () => (
                 </Row>
                 <Row>
                     <Container textAlign='center' style={containerStyle}>
-                        <Segment basic><Header size='huge'>Why us ?</Header></Segment>
+                        <Segment basic>
+                            <WhyUsHeader/>
+                        </Segment>
                         <Grid column={3} columns='equal' stackable>
                             <Row>
                                 <Column>
@@ -99,7 +128,7 @@ const AboutUs = () => (
                                         <Image centered circular src='/static/images/about/whyus2.png' size='small'/>
                                     </Container>
                                     <Segment basic>
-                                        <Header size='large'>แพทย์มือหนึ่ง เชี่ยวชาญ เชื่อถือได้</Header>
+                                        <Header style={WhyUsContentStyle}>แพทย์มือหนึ่ง เชี่ยวชาญ เชื่อถือได้</Header>
                                     </Segment>
                                 </Column>
                                 <Column>
@@ -107,7 +136,7 @@ const AboutUs = () => (
                                         <Image centered circular src='/static/images/about/whyus2.png' size='small'/>
                                     </Container>
                                     <Segment basic>
-                                        <Header size='large'>แพทย์มือหนึ่ง เชี่ยวชาญ เชื่อถือได้</Header>
+                                        <Header style={WhyUsContentStyle}>รับประกันความปลอดภัยจากคลีนิคชั้นนำ</Header>
                                     </Segment>
                                 </Column>
                                 <Column>
@@ -115,7 +144,7 @@ const AboutUs = () => (
                                         <Image centered circular src='/static/images/about/whyus2.png' size='small'/>
                                     </Container>
                                     <Segment basic>
-                                        <Header size='large'>แพทย์มือหนึ่ง เชี่ยวชาญ เชื่อถือได้</Header>
+                                        <Header style={WhyUsContentStyle}>ยินดีให้คำปรึกษาทุกข้อกังวลใจ</Header>
                                     </Segment>
                                 </Column>
                             </Row>

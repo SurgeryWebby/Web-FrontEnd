@@ -69,7 +69,6 @@ const LogInMenu = () => (
     <Segment basic style={{ paddingRight: 0, paddingTop: 0}}>
       <Button size='large' style={loginStyle} content='Log In'/>
     </Segment>
-    
   </Menu.Menu>
 )
 
