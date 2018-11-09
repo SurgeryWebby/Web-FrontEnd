@@ -3,6 +3,7 @@ import 'semantic-ui-css/semantic.min.css'
 import { Container, Header, Card, Image, Grid, Segment, Rail, Button } from 'semantic-ui-react'
 import WavyBannerSvg from '../Base/WavyBannerSvg.js'
 import TopWavySvg from '../Base/TopWavySvg.js'
+import './index.css'
 
 const { Column, Row } = Grid
 const { Group } = Card
@@ -10,60 +11,105 @@ const { Group } = Card
 const serviceContainerStyle = {
     background: 'url("/static/images/home/service-background.png")',
     backgroundSize: "cover",
-}
-
-const promotionBlogContainerStyle = {
-    background: 'url("/static/images/home/promotion-blog-background.png")',
-    backgroundSize: "cover",
-    color: "white",
-    padding: 0
-}
-
-const gridStyle = {
-    padding: 0
+    marginTop: '80px'
 }
 
 const serviceStyle = {
     backgroundImage: 'url("/static/images/home/service-content-background.png")',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'left',
-    backgroundSize: 'cover'
+    backgroundSize: 'cover',
+    marginTop: '40px'
 }
 
 const serviceGrid = {
     padding: 0
 }
 
+const promotionBlogContainerStyle = {
+    background: 'url("/static/images/home/promotion-blog-background.png")',
+    backgroundSize: "cover",
+    color: "white",
+    padding: 0,
+    marginTop: "100px"
+}
+
+const gridStyle = {
+    padding: 0
+}
+
 const seeMoreButtonStyle = {
     backgroundColor: "#C39D5C",
-    color: "white"
+    color: "white",
+    fontFamily: "ButlerRegular",
+    fontSize: '16px'
 }
 
 const headerPromotionBlogStyle = {
-    color: "white"
+    color: "white",
+    fontFamily: 'Chonburi'
 }
 
-const headerTextOverlayContainerStyle = {
-    padding: "60px 120px 60px 120px"
+const BannerHeaderContainerStyle = {
+    padding: "60px 145px 60px 120px"
 }
 
-const headerTextOverlayStyle = {
+const BannerTextOverlayStyle = {
     backgroundImage: 'url("/static/images/home/banner-overlay-background.png")',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: "left",
-    width: "700px",
-    backgroundSize: "95%",
+    width: "800px",
+    backgroundSize: "90%",
     bottom: "0px",
     position: "absolute"
 }
 
 const promotionHeaderImageStyle = {
     position: 'absolute',
-    width: '30rem',
-    top: '-3rem',
+    width: '35rem',
+    top: '-4rem',
     left: '-10rem',
     zIndex: 0
 }
+
+const SeeMoreButton = () => (
+    <Button size='large' content='See More' style={seeMoreButtonStyle}/>
+)
+
+const BannerHeader = () => (
+    <Header size='huge' style={{fontFamily: 'Chonburi', fontSize: 32 }}>หน้าวีสวยอย่างเป็นธรรมชาติ</Header>
+)
+
+const BannerContent = () => (
+    <p className='home-banner-content'>Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วน</p>
+)
+
+const ServiceHeader = () => (
+    <Header style={{ fontFamily: 'ButlerRegular', fontSize: 64 }}>Service</Header>
+)
+
+const PromotionContent = () => (
+    <p className='home-promotion-content'>
+        Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ และ
+        ฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วน ต่างๆในร่างกาย
+        Microfat คือการนำไขมันของตนเองมาผสมกับ
+    </p>
+)
+
+const PromotionHeader = () => (
+    <Header style={{zIndex: 1, position: 'relative', fontSize: 64, fontFamily: 'ButlerRegular'}}>Promotion</Header>
+)
+
+const BlogContent = () => (
+    <p className='home-blog-content'>
+        Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วน ต่างๆในร่างกาย
+        Microfat คือการนำไขมันของตนเองมาผสมกับ
+    </p>
+)
+
+const BlogHeader = () => (
+    <Header style={{ color: "white", fontFamily: 'Chonburi', fontSize: '18px'}}>สร้างกรอบหน้าให้ได้รูป สวยสมใจ</Header>
+)
 
 const Home = () => (
     <Grid>
@@ -71,11 +117,11 @@ const Home = () => (
             <Image src='/static/images/home/banner-background.png' fluid ></Image>
             <Rail internal size='tiny' position='left' style={{ left: "5%", zIndex: "2" }}>
                 <Grid>
-                    <Column only='computer tablet' style={headerTextOverlayStyle}>
-                        <Container textAlign='justified' style={headerTextOverlayContainerStyle}>
+                    <Column style={BannerTextOverlayStyle}>
+                        <Container textAlign='justified' style={BannerHeaderContainerStyle}>
                             <Segment basic>
-                                <Header size='huge'>หน้าวีสวยอย่างเป็นธรรมชาติ</Header>
-                                <p>Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วน</p>
+                                <BannerHeader />
+                                <BannerContent />
                             </Segment>
                             <Segment basic>
                                 <Button content='See More' style={seeMoreButtonStyle}/>
@@ -84,14 +130,14 @@ const Home = () => (
                     </Column>
                 </Grid>
             </Rail>
-            <WavyBannerSvg/>
+            {/* <WavyBannerSvg/> */}
         </Row>
         <Row style={serviceContainerStyle} centered>
             <Container>
                 <Grid centered style={{padding: 0}}>
                     <Row centered>
                         <Container>
-                            <Header size='huge'>Service</Header>
+                            <ServiceHeader/>
                         </Container>
                     </Row>
                     <Row>
@@ -107,8 +153,8 @@ const Home = () => (
                         </Container>
                     </Row>
                     <Row>
-                        <Container>
-                        <Button content='See More' style={seeMoreButtonStyle}/>
+                        <Container style={{ marginTop: 50 }}>
+                            <SeeMoreButton/>
                         </Container>
                     </Row>
                 </Grid>
@@ -116,7 +162,7 @@ const Home = () => (
         </Row>
         <Grid style={promotionBlogContainerStyle}>
             <Row >
-                <TopWavySvg />
+                {/* <TopWavySvg /> Removed for now due to issue https://github.com/SurgeryWebby/Web-FrontEnd/issues/12 */}
                 <Container>
                     <Grid stackable centered columns='equal'>
                         <Row>
@@ -130,32 +176,31 @@ const Home = () => (
                             <Column>
                                 <Container>
                                     <Segment basic style={{ position: 'relative' }}>
-                                        <Header style={{zIndex: 1, position: 'relative', fontSize: 50}}>Promotion</Header>
+                                        <PromotionHeader/>
                                         <Image style={promotionHeaderImageStyle} src='/static/images/home/promotion-header-overlay-background.png' size='big' centered/>
                                     </Segment>
                                 </Container>
                                 <Container>
                                     <Segment basic style={{paddingTop: 20}}>
                                         <Header size='large' style={headerPromotionBlogStyle}>หน้าวีสวยอย่างเป็นธรรมชาติ</Header>
-                                        <p>Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วน ต่างๆในร่างกาย Microfat คือการนำไขมันของตนเองมาผสมกับ</p>
+                                        <PromotionContent/>
                                     </Segment>
                                 </Container>
                                 <Container>
                                     <Segment basic>
-                                        <Button content='See More' style={seeMoreButtonStyle}/>
+                                        <SeeMoreButton/>
                                     </Segment>
                                 </Container>
-                                
                             </Column>
                         </Row> 
                     </Grid>
                 </Container>
             </Row>
-            <Row>
+            <Row style={{marginTop: "80px", marginBottom: "50px"}}>
                 <Container>
                     <Grid stackable centered columns='equal'>
                         <Container>
-                            <Header style={headerPromotionBlogStyle} size='huge'>Blog</Header>
+                            <Header style={{ fontFamily: 'ButlerRegular', color: 'white', fontSize: '48px'}} size='huge'>Blog</Header>
                         </Container>
                         <Row>
                             <Column>
@@ -164,10 +209,8 @@ const Home = () => (
                                 </Container>
                                 <Container>
                                     <Segment basic>
-                                        <Header style={headerPromotionBlogStyle} size='large'>สร้างกรอบหน้าให้ได้รูป สวยสมใจ</Header>
-                                        <p>
-                                        Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วน ต่างๆในร่างกาย Microfat คือการนำไขมันของตนเองมาผสมกับ
-                                        </p>
+                                        <BlogHeader/>
+                                        <BlogContent/>
                                     </Segment>
                                 </Container>
                             </Column>
@@ -177,10 +220,8 @@ const Home = () => (
                                 </Container>
                                 <Container>
                                     <Segment basic>
-                                        <Header style={headerPromotionBlogStyle} size='large'>สร้างกรอบหน้าให้ได้รูป สวยสมใจ</Header>
-                                        <p>
-                                        Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วน ต่างๆในร่างกาย Microfat คือการนำไขมันของตนเองมาผสมกับ
-                                        </p>
+                                        <BlogHeader/>
+                                        <BlogContent/>
                                     </Segment>
                                 </Container>
                             </Column>
@@ -190,16 +231,14 @@ const Home = () => (
                                 </Container>
                                 <Container>
                                     <Segment basic>
-                                        <Header style={headerPromotionBlogStyle} size='large'>สร้างกรอบหน้าให้ได้รูป สวยสมใจ</Header>
-                                        <p>
-                                        Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วน ต่างๆในร่างกาย Microfat คือการนำไขมันของตนเองมาผสมกับ
-                                        </p>
+                                        <BlogHeader/>
+                                        <BlogContent/>
                                     </Segment>
                                 </Container>
                             </Column>
                         </Row>
                         <Row>
-                            <Button content='See More' style={seeMoreButtonStyle}/>
+                            <SeeMoreButton/>
                         </Row>
                     </Grid>
                 </Container>
