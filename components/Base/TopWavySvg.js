@@ -1,4 +1,4 @@
-import './index.css';
+import './base.css';
 
 const TopWavySvg = () => (
     <div className="head-wave" >

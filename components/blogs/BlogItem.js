@@ -1,9 +1,15 @@
 import React from 'react';
 import { Card, Icon, Image } from 'semantic-ui-react';
+import '../Base/base.css';
 
 const BlogHeaderStyle = {
     fontFamily: 'Chonburi',
     fontSize: 18
+}
+
+const BlogContentStyle = {
+    fontFamily: 'Prompt',
+    fontSize: 14
 }
 
 export default ({blog}) => <Card fluid style={{borberColor: '#C39D5C'}}>
@@ -11,9 +17,9 @@ export default ({blog}) => <Card fluid style={{borberColor: '#C39D5C'}}>
     <Card.Content>
         <Card.Header style={BlogHeaderStyle}>{blog.title}</Card.Header>
         <Card.Meta></Card.Meta>
-        <Card.Description>{blog.shortDescription}</Card.Description>
+        <Card.Description style={BlogContentStyle}>{blog.shortDescription}</Card.Description>
         <Card.Meta></Card.Meta>
-        <Card.Description>
+        <Card.Description style={BlogContentStyle}>
             <a href="/blog" style={{color: '#C39D5C'}}>
                 อ่านต่อ
             </a>

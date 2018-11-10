@@ -1,5 +1,5 @@
 
-import './index.css';
+import './base.css';
 
 const WavyBannerSvg = () => (
     <div className="banner-wave">

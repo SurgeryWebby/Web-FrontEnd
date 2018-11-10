@@ -1,24 +1,25 @@
 import React from 'react';
 import { Button, Segment, Grid, Icon } from 'semantic-ui-react';
 
-const { Column } = Grid;
-
+const SocialCententStyle = {
+    fontFamily: 'Prompt'
+}
 export default ({vertical}) =>
         <Button.Group basic vertical={vertical}>
             <Button className="social-button">
                 <Segment vertical style={{padding: 0}}>
                     <Icon name='twitter' size='large' />
-                    <p>Tweet</p>
+                    <p style={SocialCententStyle}>Tweet</p>
                 </Segment>
             </Button>
             <Button className="social-button">
                 <Segment vertical style={{padding: 0}}>
                     <Icon name='facebook' size='large' />
-                    <p>Share</p>
+                    <p style={SocialCententStyle}>Share</p>
                 </Segment></Button>
             <Button className="social-button">
                 <Segment vertical style={{padding: 0}}>
                     <Icon name='envelope' size='large' />
-                    <p>E-mail</p>
+                    <p style={SocialCententStyle}>E-mail</p>
                 </Segment></Button>
         </Button.Group>

@@ -5,6 +5,16 @@ import './index.css';
 
 const { Row, Column } = Grid;
 
+const RelatedBlogHeaderStyle = {
+    fontFamily: 'Chonburi',
+    fontSize: 18
+}
+
+const TagsContentStyle = {
+    fontFamily: 'Prompt',
+    fontWeight: 0
+}
+
 const relatedBlogs = [
     {
         image: '/static/images/blog/relatedBlogs.png',
@@ -24,17 +34,19 @@ export default () => <Grid>
                         <Row columns={1}>
                                 <Column>
                                 <Segment vertical>
-                                    <Header as="h2">บทความที่เกี่ยวข้อง</Header>
+                                    <Header style={RelatedBlogHeaderStyle}>บทความที่น่าสนใจ</Header>
                                     <RelatedBlogList blogs={relatedBlogs} />
                                 </Segment>
                             </Column>
                             <Column>
                             <Segment vertical>
-                                <Header as="h2">Tags</Header>
-                                <Label.Group>
-                                    <Label className="tag-label" as='a'>Smart</Label>
-                                    <Label className="tag-label" as='a'>Insane</Label>
-                                    <Label className="tag-label" as='a'>Exciting</Label>
+                                <Header style={RelatedBlogHeaderStyle}>Tags</Header>
+                                <Label.Group style={TagsContentStyle}>
+                                    <Label className="tag-label" as='a'>ศัลยกรรม</Label>
+                                    <Label className="tag-label" as='a'>ศัลยกรรม</Label>
+                                    <Label className="tag-label" as='a'>ศัลยกรรม</Label>
+                                    <Label className="tag-label" as='a'>ศัลยกรรม</Label>
+                                    <Label className="tag-label" as='a'>ศัลยกรรม</Label>
                                 </Label.Group>
                                 </Segment>
                             </Column>

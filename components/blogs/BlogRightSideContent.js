@@ -4,6 +4,11 @@ import RelatedBlogList from './RealatedBlogList';
 
 const { Row, Column } = Grid;
 
+const RelatedBlogHeaderStyle = {
+    fontFamily: 'Chonburi',
+    fontSize: 18
+}
+
 const relatedBlogs = [
     {
         image: '/static/images/blog/relatedBlogs.png',
@@ -23,7 +28,7 @@ export default () => <Grid>
                         <Row columns={1}>
                             <Column>
                                 <Segment vertical>
-                                    <Header as="h2">บทความที่เกี่ยวข้อง</Header>
+                                    <Header style={RelatedBlogHeaderStyle} >บทความที่น่าสนใจ</Header>
                                     <RelatedBlogList blogs={relatedBlogs} />
                                 </Segment>
                             </Column>
