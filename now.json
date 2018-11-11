@@ -1,3 +1,4 @@
 {
-    "alias": ["surgerywebby.com"]
+    "version": 2,
+    "type": "static"
 }
