@@ -26,9 +26,14 @@ class BlogsComponent extends Component {
     const { activePage, contextRef } = this.state;
     return (
       <Grid>
+        <Row>
+            <Container fluid>
+                <Banner title="Blogs"
+                        imagePath='/static/images/about/banner-background.png' />
+            </Container>
+        </Row>
         <Row style={TopRowStyle}>
           <Container fluid>
-            <Banner title="Blogs"/>
             <Container>
               <div ref={this.handleContextRef}>
                 <Grid clumn={2}>

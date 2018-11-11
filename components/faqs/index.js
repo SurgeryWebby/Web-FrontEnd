@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import 'semantic-ui-css/semantic.min.css';
 import { Container, Header, Image, Rail, Button, Segment, Card, Icon, Grid, Pagination } from 'semantic-ui-react';
 import MessengerMessageUs from 'react-messenger-message-us';
@@ -16,9 +15,14 @@ class FaqsComponent extends Component {
   render() {
     return (
         <Grid>
+            <Row>
+                <Container fluid>
+                    <Banner title="Blogs"
+                            imagePath='/static/images/about/banner-background.png' />
+                </Container>
+            </Row>
             <Row style={topRowStyle}>
                 <Container fluid className="faqs-content">
-                    <Banner title="FAQs"/>
                     <Container>
                         <Segment vertical style={{borderBottom: 0}}>
                             <FaqsAccordions />

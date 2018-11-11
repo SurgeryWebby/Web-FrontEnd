@@ -3,6 +3,7 @@ import 'semantic-ui-css/semantic.min.css'
 import { Container, Header, Card, Image, Grid, Segment, Rail, Button } from 'semantic-ui-react'
 import WavyBannerSvg from '../Base/WavyBannerSvg.js'
 import TopWavySvg from '../Base/TopWavySvg.js'
+import ServiceComponent from './ServiceComponent';
 import './index.css'
 
 const { Column, Row } = Grid
@@ -33,7 +34,8 @@ const promotionBlogContainerStyle = {
     color: "white",
     padding: 0,
     paddingTop: 100,
-    position: 'relative'
+    position: 'relative',
+    marginTop: 0
 }
 
 const gridStyle = {
@@ -144,16 +146,7 @@ const Home = () => (
                         </Container>
                     </Row>
                     <Row>
-                        <Container style={serviceStyle} textAlign='center'>
-                            <Grid container columns={3} doubling stackable>
-                                <Column style={serviceGrid}><Image src='/static/images/home/service-content-element.png' centered/></Column>
-                                <Column style={serviceGrid}><Image src='/static/images/home/service-content-element.png' centered/></Column>
-                                <Column style={serviceGrid}><Image src='/static/images/home/service-content-element.png' centered/></Column>
-                                <Column style={serviceGrid}><Image src='/static/images/home/service-content-element.png' centered/></Column>
-                                <Column style={serviceGrid}><Image src='/static/images/home/service-content-element.png' centered/></Column>
-                                <Column style={serviceGrid}><Image src='/static/images/home/service-content-element.png' centered/></Column>
-                            </Grid>
-                        </Container>
+                        <ServiceComponent />
                     </Row>
                     <Row>
                         <Container style={{ marginTop: 50 }}>
