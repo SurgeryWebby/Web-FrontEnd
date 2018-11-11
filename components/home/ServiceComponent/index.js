@@ -10,7 +10,7 @@ const ServiceGroupStyle = {
     backgroundOrigin: 'border-box',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
-    backgroundSize: 'auto 100%'
+    backgroundSize: '75% 100%'
 }
 
 const ServiceGroupMobileStyle = {
@@ -26,19 +26,19 @@ const ServiceGroupMobileStyle = {
 export default () =>
     <Grid centered>
         <Row style={ServiceGroupStyle} only='computer'>
-            <Column mobile={16} computer={5} style={{padding: 0}}><ServiceItem /></Column>
-            <Column mobile={16} computer={5} style={{padding: 0}}><ServiceItem /></Column>
-            <Column mobile={16} computer={5} style={{padding: 0}}><ServiceItem /></Column>
-            <Column mobile={16} computer={5} style={{padding: 0}}><ServiceItem /></Column>
-            <Column mobile={16} computer={5} style={{padding: 0}}><ServiceItem /></Column>
-            <Column mobile={16} computer={5} style={{padding: 0}}><ServiceItem /></Column>
+            <Column mobile={16} computer={5} style={{padding: 0}}><ServiceItem title='เสริมจมูก' /></Column>
+            <Column mobile={16} computer={5} style={{padding: 0}}><ServiceItem title='เสริมจมูก' /></Column>
+            <Column mobile={16} computer={5} style={{padding: 0}}><ServiceItem title='เสริมจมูก' /></Column>
+            <Column mobile={16} computer={5} style={{padding: 0}}><ServiceItem title='เสริมจมูก' /></Column>
+            <Column mobile={16} computer={5} style={{padding: 0}}><ServiceItem title='เสริมจมูก' /></Column>
+            <Column mobile={16} computer={5} style={{padding: 0}}><ServiceItem title='เสริมจมูก' /></Column>
         </Row>
         <Row style={ServiceGroupMobileStyle} only='mobile tablet'>
-            <Column mobile={16} computer={5} style={{padding: 0}}><ServiceItem /></Column>
-            <Column mobile={16} computer={5} style={{padding: 0}}><ServiceItem /></Column>
-            <Column mobile={16} computer={5} style={{padding: 0}}><ServiceItem /></Column>
-            <Column mobile={16} computer={5} style={{padding: 0}}><ServiceItem /></Column>
-            <Column mobile={16} computer={5} style={{padding: 0}}><ServiceItem /></Column>
-            <Column mobile={16} computer={5} style={{padding: 0}}><ServiceItem /></Column>
+            <Column mobile={16} computer={5} style={{padding: 0}}><ServiceItem title='เสริมจมูก' /></Column>
+            <Column mobile={16} computer={5} style={{padding: 0}}><ServiceItem title='เสริมจมูก' /></Column>
+            <Column mobile={16} computer={5} style={{padding: 0}}><ServiceItem title='เสริมจมูก' /></Column>
+            <Column mobile={16} computer={5} style={{padding: 0}}><ServiceItem title='เสริมจมูก' /></Column>
+            <Column mobile={16} computer={5} style={{padding: 0}}><ServiceItem title='เสริมจมูก' /></Column>
+            <Column mobile={16} computer={5} style={{padding: 0}}><ServiceItem title='เสริมจมูก' /></Column>
         </Row>
     </Grid>

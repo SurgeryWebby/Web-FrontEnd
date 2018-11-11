@@ -17,7 +17,7 @@ class FaqsComponent extends Component {
         <Grid>
             <Row>
                 <Container fluid>
-                    <Banner title="Blogs"
+                    <Banner title="FAQs"
                             imagePath='/static/images/about/banner-background.png' />
                 </Container>
             </Row>
