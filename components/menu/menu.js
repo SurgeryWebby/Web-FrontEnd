@@ -95,12 +95,8 @@ class MenuDefault extends Component {
           <Container>
             <Grid columns='equal' style={ColumnTopMenu} >
               <Row verticalAlign='middle'>
-                <Column floated='left' verticalAlign='middle'>
-                  <NumberAndFB/>
-                </Column>
-                <Column floated='right' textAlign='right'>
-                  <Language/>
-                </Column>
+                <Column floated='left' verticalAlign='middle'><NumberAndFB/></Column>
+                <Column floated='right' textAlign='right'><Language/></Column>
               </Row>
             </Grid>
           </Container>
