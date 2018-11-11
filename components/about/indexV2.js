@@ -62,20 +62,11 @@ const WhyUsHeader = () => (
 
 const AboutUs = () => (
     <Grid>
-        <Row style={gridStyle}>
-            <Image src='/static/images/about/banner-background.png' fluid></Image>
-            <Rail internal size='tiny' position='left' style={railStyle}>
-                <Grid>
-                    <Column style={headerTextOverlayStyle} verticalAlign='middle' textAlign='center'>
-                        <Container textAlign='justified' style={BannerHeaderContainerStyle}>
-                            <Segment basic>
-                                <BannerText/>
-                            </Segment>
-                        </Container>
-                    </Column>
-                </Grid>
-            </Rail>
-            <WavyBannerSvg />
+        <Row>
+            <Container fluid>
+                <Banner title="About us"
+                        imagePath='/static/images/about/banner-background.png' />
+            </Container>
         </Row>
         <Row style={contentContainerStyle}>
             <Grid>
