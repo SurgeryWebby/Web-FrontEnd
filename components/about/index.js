@@ -1,8 +1,7 @@
 import React from 'react';
 import 'semantic-ui-css/semantic.min.css';
-import { Container, Header, Card, Icon, Image, Grid, Rail, Segment } from 'semantic-ui-react';
-import WavyBannerSvg from '../Base/WavyBannerSvg.js';
-import Banner from '../Base/Banner.js';
+import { Container, Header, Image, Grid, Rail, Segment } from 'semantic-ui-react';
+import WavyBannerSvg from '../common/banner/WavyBannerSvg.js';
 
 // TODO Move to css maybe or styled components
 const { Column, Row } = Grid
@@ -53,7 +52,7 @@ const BannerText = () => (
 )
 
 const ContentHeader = () => (
-    <Header style={{ fontFamily: 'Chonburi', fontSize: 32}}>หน้าวีสวยอย่างเป็นธรรมชาติ</Header>
+    <Header style={{ fontFamily: 'Chonburi', fontSize: 32 }}>หน้าวีสวยอย่างเป็นธรรมชาติ</Header>
 )
 
 const WhyUsHeader = () => (
@@ -69,7 +68,7 @@ const AboutUs = () => (
                     <Column style={headerTextOverlayStyle} verticalAlign='middle' textAlign='center'>
                         <Container textAlign='justified' style={BannerHeaderContainerStyle}>
                             <Segment basic>
-                                <BannerText/>
+                                <BannerText />
                             </Segment>
                         </Container>
                     </Column>
@@ -82,32 +81,32 @@ const AboutUs = () => (
                 <Row>
                     <Container>
                         <Segment basic>
-                            <Image src='/static/images/about/video.png' centered/>
+                            <Image src='/static/images/about/video.png' centered />
                         </Segment>
                     </Container>
                 </Row>
                 <Row>
                     <Container textAlign='center'>
                         <Segment basic>
-                            <ContentHeader/>
+                            <ContentHeader />
                         </Segment>
                         <Segment basic>
-                            Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ 
-                            และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วนต่างๆในร่างกาย Microfat 
-                            คือการนำไขมันของตนเองมาผสมกับ สเต็มเซลล์และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้า 
-                            หรือเติมเต็ม Microfat คือการนำไขมัน ของตนเองมาผสมกับสเต็มเซลล์และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วนต่างๆในร่างกาย 
-                            Microfat คือการนำไขมัน ของตนเองมาผสมกับ สเต็มเซลล์และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้า 
-                            หรือเติมเต็มสัดส่วนต่างๆในร่างกาย Microfat 
+                            Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์
+                            และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วนต่างๆในร่างกาย Microfat
                             คือการนำไขมันของตนเองมาผสมกับ สเต็มเซลล์และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้า
-                            หรือเติมเต็มสัดส่วนต่างๆในร่างกาย Microfat คือการนำไขมัน
+                            หรือเติมเต็ม Microfat คือการนำไขมัน ของตนเองมาผสมกับสเต็มเซลล์และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วนต่างๆในร่างกาย 
+                            Microfat คือการนำไขมัน ของตนเองมาผสมกับ สเต็มเซลล์และฉีดเติมเต็มกลับเขาไปสู่บริเวณใบหน้า 
+                            หรือเติมเต็มสัดส่วนต่างๆในร่างกาย Microfat 
+                            คือการนำไขมันของตนเองมาผสมกับ สเต็มเซล์และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้า
+                            หรือเติมเต็มสัดส่วนต่างๆในร่างกาย Microfatคือการนำไขมัน
                         </Segment>
                         <Segment basic>
                             Microfat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วนต่างๆในร่างกาย 
                             Microfat คือการนำไขมันของตนเองมาผสมกับ สเต็มเซลล์และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้า หรือเติมเต็ม Microfat 
                             คือการนำไขมัน ของตนเองมาผสมกับสเต็มเซลล์และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วนต่างๆในร่างกาย 
-                            Microfat คือการนำไขมัน ของตนเองมาผสมกับ สเต็มเซลล์และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้า หรือเติมเต็มสัดส่วนต่างๆในร่างกาย 
+                            Microfat คือการนำไขมัน ของตนเองมาผสมกับ สเต็มเซลล์และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้า หรือเติมเต็มสัดส่วนตางๆในร่างกาย 
                             Microfat คือการนำไขมันของตนเองมาผสมกับ สเต็มเซลล์และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้า 
-                            หรือเติมเต็มสัดส่วนต่างๆในร่างกาย Microfat คือการนำไขมันMicrofat คือ การนำไขมันของตนเองมาผสมกับสเต็มเซลล์ และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วนต่างๆในร่างกาย 
+                            หรือเติมเต็มสัดส่วนต่างๆในร่างกาย Microfat คือการนำไขมันMicrofat คือ กรนำไขมันของตนเองมาผสมกับสเต็มเซลล์ และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้าหรือเติมเต็มสัดส่วนต่างๆในร่างกาย 
                             Microfat คือการนำไขมันของตนเองมาผสมกับ สเต็มเซลล์และฉีดเติมเต็มกลับเข้าไปสู่บริเวณใบหน้า หรือเติมเต็ม Microfat คือการนำไขมัน
                         </Segment>
                     </Container>
@@ -119,13 +118,13 @@ const AboutUs = () => (
                         </Segment>
                         <Grid column={3} columns='equal' stackable>
                             <Row>
-                                <Column>
+                                <Column> 
                                     <Container>
                                         <Image centered circular src='/static/images/about/whyus2.png' size='small'/>
                                     </Container>
                                     <Segment basic>
                                         <Header style={WhyUsContentStyle}>แพทย์มือหนึ่ง เชี่ยวชาญ เชื่อถือได้</Header>
-                                    </Segment>
+                                    </Segment> 
                                 </Column>
                                 <Column>
                                     <Container>
@@ -134,7 +133,7 @@ const AboutUs = () => (
                                     <Segment basic>
                                         <Header style={WhyUsContentStyle}>รับประกันความปลอดภัยจากคลีนิคชั้นนำ</Header>
                                     </Segment>
-                                </Column>
+                                </Column> 
                                 <Column>
                                     <Container>
                                         <Image centered circular src='/static/images/about/whyus2.png' size='small'/>
@@ -142,7 +141,7 @@ const AboutUs = () => (
                                     <Segment basic>
                                         <Header style={WhyUsContentStyle}>ยินดีให้คำปรึกษาทุกข้อกังวลใจ</Header>
                                     </Segment>
-                                </Column>
+                                </Column> 
                             </Row>
                         </Grid>
                     </Container>

@@ -1,30 +1,17 @@
 import React from 'react'
 import 'semantic-ui-css/semantic.min.css'
 import { Container, Header, Card, Image, Grid, Segment, Rail, Button } from 'semantic-ui-react'
-import WavyBannerSvg from '../Base/WavyBannerSvg.js'
-import TopWavySvg from '../Base/TopWavySvg.js'
-import ServiceComponent from './ServiceComponent';
+import WavyBannerSvg from '../common/banner/WavyBannerSvg.js'
+import TopWavySvg from '../common/banner/TopWavySvg.js'
+import ServiceComponent from './service/ServiceComponent';
 import './index.css'
 
 const { Column, Row } = Grid
-const { Group } = Card
 
 const serviceContainerStyle = {
     background: 'url("/static/images/home/service-background.png")',
     backgroundSize: "cover",
     marginTop: '80px'
-}
-
-const serviceStyle = {
-    // backgroundImage: 'url("/static/images/home/service-content-background.png")',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'left',
-    backgroundSize: 'cover',
-    marginTop: '40px'
-}
-
-const serviceGrid = {
-    padding: 0
 }
 
 const promotionBlogContainerStyle = {
