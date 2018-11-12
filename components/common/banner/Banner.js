@@ -1,7 +1,6 @@
 import React from 'react';
 import { Segment, Image, Rail, Header } from 'semantic-ui-react';
 import WavyBannerSvg from './WavyBannerSvg.js'
-import './base.css';
 
 const HeaderStyle = {
     fontFamily: 'ButlerRegular',
@@ -9,7 +8,6 @@ const HeaderStyle = {
 }
 
 export default ({ title, imagePath }) => {
-
     const BannerContentStyled = {
         position: 'relative',
         minHeight: '30rem !important',
@@ -17,7 +15,8 @@ export default ({ title, imagePath }) => {
         backgroundRepeat: 'no-repeat !important',
         backgroundSize: 'auto 100% !important',
         backgroundPosition: 'center !important',
-        padding: 0, borderBottom: 0
+        padding: 0,
+        borderBottom: 0
     }
 
     return <Segment style={BannerContentStyled} vertical >
@@ -25,10 +24,12 @@ export default ({ title, imagePath }) => {
             <Segment vertical style={{ padding: 0, borderBottom: 0, position: 'absolute', left: '10vw', bottom: 0, width: 400, zIndex: 2 }}>
                 <Image fluid src={'/static/images/faqs/shell.png'} />
                 <Rail size='massive' internal position='left' style={{ paddingLeft: 120, top: 60 }}>
-                    <Segment basic><Header style={HeaderStyle}>{title}</Header></Segment>
+                    <Segment basic>
+                        <Header style={HeaderStyle}>{title}</Header>
+                    </Segment>
                 </Rail>
             </Segment>
         </Rail>
         <WavyBannerSvg />
-    </Segment>;
+    </Segment>
 }

@@ -4,7 +4,8 @@ import { Button, Segment, Icon } from 'semantic-ui-react';
 const SocialCententStyle = {
     fontFamily: 'Prompt'
 }
-export default ({ vertical }) =>
+
+export default ({ vertical }) => (
     <Button.Group basic vertical={vertical}>
         <Button className="social-button">
             <Segment vertical style={{ padding: 0 }}>
@@ -23,3 +24,4 @@ export default ({ vertical }) =>
                 <p style={SocialCententStyle}>E-mail</p>
             </Segment></Button>
     </Button.Group>
+)
