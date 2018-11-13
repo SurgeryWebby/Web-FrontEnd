@@ -13,7 +13,9 @@ const TitleStyle = {
     fontFamily: 'Chonburi'
 }
 
-export default ({imagePath, title}) => <div style={ServiceItemStyle}>
-        <Image fluid src={ imagePath ? imagePath : '/static/images/home/service-content-element.png' }/>
+export default ({ imagePath, title }) => (
+    <div style={ServiceItemStyle}>
+        <Image fluid src={imagePath ? imagePath : '/static/images/home/service-content-element.png'} />
         <Header style={TitleStyle}>{title}</Header>
     </div>
+)

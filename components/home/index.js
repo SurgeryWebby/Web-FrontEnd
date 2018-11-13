@@ -1,30 +1,17 @@
 import React from 'react'
 import 'semantic-ui-css/semantic.min.css'
-import { Container, Header, Card, Image, Grid, Segment, Rail, Button } from 'semantic-ui-react'
-import WavyBannerSvg from '../Base/WavyBannerSvg.js'
-import TopWavySvg from '../Base/TopWavySvg.js'
-import ServiceComponent from './ServiceComponent';
+import { Container, Header, Image, Grid, Segment, Rail, Button } from 'semantic-ui-react'
+import WavyBannerSvg from '../common/banner/WavyBannerSvg.js'
+import TopWavySvg from '../common/banner/TopWavySvg.js'
+import ServiceComponent from './service/ServiceComponent';
 import './index.css'
 
 const { Column, Row } = Grid
-const { Group } = Card
 
 const serviceContainerStyle = {
     background: 'url("/static/images/home/service-background.png")',
     backgroundSize: "cover",
-    marginTop: '80px'
-}
-
-const serviceStyle = {
-    // backgroundImage: 'url("/static/images/home/service-content-background.png")',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'left',
-    backgroundSize: 'cover',
-    marginTop: '40px'
-}
-
-const serviceGrid = {
-    padding: 0
+    marginTop: 80
 }
 
 const promotionBlogContainerStyle = {
@@ -47,7 +34,7 @@ const seeMoreButtonStyle = {
     backgroundColor: "#C39D5C",
     color: "white",
     fontFamily: "ButlerRegular",
-    fontSize: '16px'
+    fontSize: 16
 }
 
 const headerPromotionBlogStyle = {
@@ -63,9 +50,9 @@ const BannerTextOverlayStyle = {
     backgroundImage: 'url("/static/images/home/banner-overlay-background.png")',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: "left",
-    width: "800px",
+    width: 800,
     backgroundSize: "90%",
-    bottom: "0px",
+    bottom: 0,
     position: "absolute"
 }
 
@@ -78,11 +65,11 @@ const promotionHeaderImageStyle = {
 }
 
 const SeeMoreButton = () => (
-    <Button size='large' content='See More' style={seeMoreButtonStyle}/>
+    <Button size='large' content='See More' style={seeMoreButtonStyle} />
 )
 
 const BannerHeader = () => (
-    <Header size='huge' style={{fontFamily: 'Chonburi', fontSize: 32 }}>หน้าวีสวยอย่างเป็นธรรมชาติ</Header>
+    <Header size='huge' style={{ fontFamily: 'Chonburi', fontSize: 32 }}>หน้าวีสวยอย่างเป็นธรรมชาติ</Header>
 )
 
 const BannerContent = () => (
@@ -103,7 +90,7 @@ const PromotionContent = () => (
 
 const PromotionHeader = () => (
     <Header style={{zIndex: 1, position: 'relative', fontSize: 64, fontFamily: 'ButlerRegular'}}>Promotion</Header>
-)
+)  
 
 const BlogContent = () => (
     <p className='home-blog-content'>
@@ -115,7 +102,7 @@ const BlogContent = () => (
 const BlogHeader = () => (
     <Header style={{ color: "white", fontFamily: 'Chonburi', fontSize: '18px'}}>สร้างกรอบหน้าให้ได้รูป สวยสมใจ</Header>
 )
-
+ 
 const Home = () => (
     <Grid>
         <Row style={gridStyle}>
@@ -131,7 +118,7 @@ const Home = () => (
                             <Segment basic>
                                 <Button content='See More' style={seeMoreButtonStyle}/>
                             </Segment>
-                        </Container>
+                        </Container> 
                     </Column>
                 </Grid>
             </Rail>
@@ -141,10 +128,10 @@ const Home = () => (
             <Container>
                 <Grid centered style={{padding: 0}}>
                     <Row centered>
-                        <Container>
+                        <Container>  
                             <ServiceHeader/>
                         </Container>
-                    </Row>
+                    </Row> 
                     <Row>
                         <ServiceComponent />
                     </Row>
@@ -152,7 +139,7 @@ const Home = () => (
                         <Container style={{ marginTop: 50 }}>
                             <SeeMoreButton/>
                         </Container>
-                    </Row>
+                    </Row> 
                 </Grid>
             </Container>
         </Row>
@@ -167,26 +154,26 @@ const Home = () => (
                                     <Segment basic>
                                         <Image src='/static/images/home/service-content-element.png' size='big' centered/>
                                     </Segment>
-                                </Container>
+                                </Container> 
                             </Column>
                             <Column>
                                 <Container>
                                     <Segment basic style={{ position: 'relative' }}>
                                         <PromotionHeader/>
                                         <Image style={promotionHeaderImageStyle} src='/static/images/home/promotion-header-overlay-background.png' size='big' centered/>
-                                    </Segment>
-                                </Container>
+                                    </Segment> 
+                                </Container> 
                                 <Container>
                                     <Segment basic style={{paddingTop: 20}}>
                                         <Header size='large' style={headerPromotionBlogStyle}>หน้าวีสวยอย่างเป็นธรรมชาติ</Header>
-                                        <PromotionContent/>
+                                        <PromotionContent/>  
                                     </Segment>
-                                </Container>
+                                </Container> 
                                 <Container>
                                     <Segment basic>
                                         <SeeMoreButton/>
                                     </Segment>
-                                </Container>
+                                </Container> 
 
                             </Column>
                         </Row>
@@ -195,49 +182,49 @@ const Home = () => (
             </Row>
             <Row style={{marginTop: "80px", marginBottom: "50px"}}>
                 <Container>
-                    <Grid stackable centered columns='equal'>
+                    <Grid  stackable centered columns='equal'> 
                         <Container>
                             <Header style={{ fontFamily: 'ButlerRegular', color: 'white', fontSize: '48px'}} size='huge'>Blog</Header>
                         </Container>
-                        <Row>
+                        <Row> 
                             <Column>
                                 <Container>
                                     <Image src='/static/images/home/service-content-element.png' size='big' centered/>
                                 </Container>
-                                <Container>
+                                <Container> 
                                     <Segment basic>
                                         <BlogHeader/>
                                         <BlogContent/>
-                                    </Segment>
-                                </Container>
+                                    </Segment> 
+                                </Container> 
                             </Column>
                             <Column>
                                 <Container>
                                     <Image src='/static/images/home/service-content-element.png' size='big' centered/>
                                 </Container>
-                                <Container>
+                                <Container> 
                                     <Segment basic>
                                         <BlogHeader/>
                                         <BlogContent/>
-                                    </Segment>
-                                </Container>
+                                    </Segment> 
+                                </Container> 
                             </Column>
                             <Column>
                                 <Container >
                                     <Image src='/static/images/home/service-content-element.png' size='big' centered/>
                                 </Container>
-                                <Container>
+                                <Container> 
                                     <Segment basic>
                                         <BlogHeader/>
                                         <BlogContent/>
-                                    </Segment>
-                                </Container>
+                                    </Segment> 
+                                </Container> 
                             </Column>
                         </Row>
                         <Row>
                             <SeeMoreButton/>
                         </Row>
-                    </Grid>
+                    </Grid> 
                 </Container>
             </Row>
         </Grid>

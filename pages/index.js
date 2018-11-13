@@ -1,17 +1,15 @@
 import MenuDefault from '../components/menu/menu.js'
 import FooterDefault from '../components/footer/footer.js'
-import Home from '../components/home/home.js'
+import Home from '../components/home/index.js'
 
-const Index = () => (
+export default () => (
   <div>
     <style>
       @import url('https://fonts.googleapis.com/css?family=Chonburi|Prompt');
     </style>
-    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/butler" type="text/css"/>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/butler" type="text/css" />
     <MenuDefault activeItem='Home' />
     <Home />
-    <FooterDefault/>
+    <FooterDefault />
   </div>
 )
-
-export default Index

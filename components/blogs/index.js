@@ -4,7 +4,7 @@ import 'semantic-ui-css/semantic.min.css';
 import { Container, Grid, Sticky } from 'semantic-ui-react';
 import BlogRightSideContent from './BlogRightSideContent';
 import BlogList from './BlogList';
-import Banner from '../Base/Banner';
+import Banner from '../common/banner/Banner';
 
 const blogs = require('./mock/blogs');
 const { Column, Row } = Grid;
@@ -27,30 +27,30 @@ class BlogsComponent extends Component {
     return (
       <Grid>
         <Row>
-            <Container fluid>
-                <Banner title="Blogs"
-                        imagePath='/static/images/about/banner-background.png' />
-            </Container>
+          <Container fluid>
+            <Banner title="Blogs"
+              imagePath='/static/images/about/banner-background.png' />
+          </Container>
         </Row>
         <Row style={TopRowStyle}>
           <Container fluid>
             <Container>
               <div ref={this.handleContextRef}>
                 <Grid clumn={2}>
-                    <Column mobile={16} computer={10}>
-                      <BlogList blogs={blogs}
-                                activePage={activePage}
-                                handlePaginationChange={this.handlePaginationChange}/>
-                    </Column>
-                    <Column mobile={16} computer={6} >
-                        <Sticky context={contextRef}>
-                          <BlogRightSideContent />
-                        </Sticky>
-                    </Column>
+                  <Column mobile={16} computer={10}>
+                    <BlogList blogs={blogs}
+                      activePage={activePage}
+                      handlePaginationChange={this.handlePaginationChange} />
+                  </Column>
+                  <Column mobile={16} computer={6} >
+                    <Sticky context={contextRef}>
+                      <BlogRightSideContent />
+                    </Sticky>
+                  </Column>
                 </Grid>
               </div>
             </Container>
-        </Container>
+          </Container>
         </Row>
       </Grid>
     )

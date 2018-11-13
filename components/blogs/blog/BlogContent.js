@@ -1,5 +1,5 @@
 import React from 'react';
-import { Segment, Grid, Image, Header} from 'semantic-ui-react';
+import { Segment, Grid, Image, Header } from 'semantic-ui-react';
 import SocailButtonGroup from './SocialButtonGroup';
 const { Column, Row } = Grid;
 

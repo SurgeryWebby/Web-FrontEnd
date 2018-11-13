@@ -1,6 +1,6 @@
 import React from 'react';
-import { Grid, Header, Label, Segment, Icon } from 'semantic-ui-react';
-import RelatedBlogList from '../RealatedBlogList';
+import { Grid, Header, Label, Segment } from 'semantic-ui-react';
+import RelatedBlogList from '../RelatedBlogList';
 import './index.css';
 
 const { Row, Column } = Grid;
@@ -31,24 +31,24 @@ const relatedBlogs = [
 ]
 
 export default () => <Grid>
-                        <Row columns={1}>
-                                <Column>
-                                <Segment vertical>
-                                    <Header style={RelatedBlogHeaderStyle}>บทความที่น่าสนใจ</Header>
-                                    <RelatedBlogList blogs={relatedBlogs} />
-                                </Segment>
-                            </Column>
-                            <Column>
-                            <Segment vertical>
-                                <Header style={RelatedBlogHeaderStyle}>Tags</Header>
-                                <Label.Group style={TagsContentStyle}>
-                                    <Label className="tag-label" as='a'>ศัลยกรรม</Label>
-                                    <Label className="tag-label" as='a'>ศัลยกรรม</Label>
-                                    <Label className="tag-label" as='a'>ศัลยกรรม</Label>
-                                    <Label className="tag-label" as='a'>ศัลยกรรม</Label>
-                                    <Label className="tag-label" as='a'>ศัลยกรรม</Label>
-                                </Label.Group>
-                                </Segment>
-                            </Column>
-                        </Row>
-                    </Grid>
+    <Row columns={1}>
+        <Column>
+            <Segment vertical>
+                <Header style={RelatedBlogHeaderStyle}>บทความที่น่าสนใจ</Header>
+                <RelatedBlogList blogs={relatedBlogs} />
+            </Segment>
+        </Column>
+        <Column>
+            <Segment vertical>
+                <Header style={RelatedBlogHeaderStyle}>Tags</Header>
+                <Label.Group style={TagsContentStyle}>
+                    <Label className="tag-label" as='a'>ศัลยกรรม</Label>
+                    <Label className="tag-label" as='a'>ศัลยกรรม</Label>
+                    <Label className="tag-label" as='a'>ศัลยกรรม</Label>
+                    <Label className="tag-label" as='a'>ศัลยกรรม</Label>
+                    <Label className="tag-label" as='a'>ศัลยกรรม</Label>
+                </Label.Group>
+            </Segment>
+        </Column>
+    </Row>
+</Grid>
