@@ -4,9 +4,9 @@
   "description": "Front end Test again",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
+    "dev": "npm run lint && next",
+    "build": "npm run lint && next build",
+    "start": "npm run lint && next build && next start",
     "lint": "eslint . --fix"
   },
   "repository": {
