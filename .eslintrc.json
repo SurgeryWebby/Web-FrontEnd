@@ -21,10 +21,47 @@
         "react/jsx-uses-vars": [
             2
         ],
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-        "react/jsx-indent": [2, 4],
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ]
+            }
+        ],
+        "react/jsx-indent-props": [
+            2,
+            4
+        ],
+        "react/jsx-indent": [
+            2,
+            4
+        ],
+        "react/jsx-wrap-multilines": [
+            "error",
+            {
+                "declaration": "parens",
+                "assignment": "parens",
+                "return": "parens",
+                "arrow": "parens",
+                "condition": "ignore",
+                "logical": "ignore",
+                "prop": "ignore"
+            }
+        ],
+        "react/no-array-index-key": 0,
         "no-console": 0,
-        "indent": ["error", 4],
-        "max-len": ["error", { "code": 140 }]
+        "indent": [
+            "error",
+            4
+        ],
+        "max-len": [
+            "error",
+            {
+                "code": 160,
+                "ignoreStrings": true
+            }
+        ]
     }
 }
