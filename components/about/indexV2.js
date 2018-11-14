@@ -3,7 +3,7 @@ import 'semantic-ui-css/semantic.min.css';
 import {
     Container, Header, Image, Grid, Segment,
 } from 'semantic-ui-react';
-import Banner from '../Base/Banner';
+import Banner from '../common/banner/Banner';
 
 const { Column, Row } = Grid;
 

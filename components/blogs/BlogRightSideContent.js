@@ -2,7 +2,7 @@ import React from 'react';
 import {
     Grid, Header, Label, Segment,
 } from 'semantic-ui-react';
-import RelatedBlogList from './RealatedBlogList';
+import RelatedBlogList from './RelatedBlogList';
 
 const { Row, Column } = Grid;
 

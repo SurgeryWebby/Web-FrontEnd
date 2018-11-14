@@ -3,9 +3,9 @@ import 'semantic-ui-css/semantic.min.css';
 import {
     Container, Header, Image, Grid, Segment, Rail, Button,
 } from 'semantic-ui-react';
-import WavyBannerSvg from '../Base/WavyBannerSvg';
-import TopWavySvg from '../Base/TopWavySvg';
-import ServiceComponent from './ServiceComponent';
+import WavyBannerSvg from '../common/banner/WavyBannerSvg';
+import TopWavySvg from '../common/banner/TopWavySvg';
+import ServiceComponent from './service/ServiceComponent';
 import './index.css';
 
 const { Column, Row } = Grid;
@@ -190,7 +190,6 @@ const Home = () => (
                                         <SeeMoreButton />
                                     </Segment>
                                 </Container>
-
                             </Column>
                         </Row>
                     </Grid>
