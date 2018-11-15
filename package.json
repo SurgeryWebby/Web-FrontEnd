@@ -4,9 +4,9 @@
   "description": "Front end Test again",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run lint && next",
-    "build": "npm run lint && next build",
-    "start": "npm run lint && next build && next start",
+    "dev": "npm run lint && next src",
+    "build": "npm run lint && next build src",
+    "start": "npm run lint && next build src && next start",
     "lint": "eslint . --fix"
   },
   "repository": {
@@ -34,10 +34,14 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
     "eslint": "^5.9.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.11.1"
+    "eslint-plugin-react": "^7.11.1",
+    "expect.js": "^0.3.1",
+    "mocha": "^5.2.0"
   }
 }
