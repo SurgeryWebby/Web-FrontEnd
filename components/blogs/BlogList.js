@@ -9,11 +9,11 @@ export default ({ blogs, activePage, handlePaginationChange }) => (
     <Segment vertical>
         <Grid doubling columns={2}>
             {
-                blogs.slice((activePage - 1) * 6, activePage * 6).map((b) => {
-                    return <Column key={b.id}>
+                blogs.slice((activePage - 1) * 6, activePage * 6).map(b => (
+                    <Column key={b.id}>
                         <BlogItem blog={b} />
                     </Column>
-                })
+                ))
             }
             <Row centered>
                 <Pagination
@@ -29,4 +29,4 @@ export default ({ blogs, activePage, handlePaginationChange }) => (
             </Row>
         </Grid>
     </Segment>
-)
+);

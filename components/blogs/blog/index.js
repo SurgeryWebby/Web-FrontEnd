@@ -13,20 +13,22 @@ class BlogsComponent extends Component {
 
     render() {
         const { contextRef } = this.state;
-        return <Container>
-            <div ref={this.handleContextRef}>
-                <Grid column={2}>
-                    <Column mobile={16} computer={10}>
-                        <BlogContent />
-                    </Column>
-                    <Column mobile={16} computer={6}>
-                        <Sticky context={contextRef}>
-                            <BlogRightSideContent />
-                        </Sticky>
-                    </Column>
-                </Grid>
-            </div>
-        </Container>
+        return (
+            <Container>
+                <div ref={this.handleContextRef}>
+                    <Grid column={2}>
+                        <Column mobile={16} computer={10}>
+                            <BlogContent />
+                        </Column>
+                        <Column mobile={16} computer={6}>
+                            <Sticky context={contextRef}>
+                                <BlogRightSideContent />
+                            </Sticky>
+                        </Column>
+                    </Grid>
+                </div>
+            </Container>
+        );
     }
 }
 
