@@ -3,7 +3,7 @@ import 'semantic-ui-css/semantic.min.css';
 import { Container, Grid, Sticky } from 'semantic-ui-react';
 import BlogRightSideContent from './BlogRightSideContent';
 import BlogList from './BlogList';
-import Banner from '../common/banner/Banner';
+import Banner from '../common/Banner';
 
 const blogs = require('./mock/blogs');
 
