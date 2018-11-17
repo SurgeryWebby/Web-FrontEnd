@@ -1,7 +1,7 @@
 import React from 'react';
-import MenuDefault from '../components/menu/menu';
-import FooterDefault from '../components/footer/footer';
-import Home from '../components/home/index';
+import MenuDefault from '../main/menu/menu';
+import FooterDefault from '../main/footer/footer';
+import Home from '../main/home/index';
 
 const Index = () => (
     <div>
