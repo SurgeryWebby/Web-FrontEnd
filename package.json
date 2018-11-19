@@ -1,7 +1,7 @@
 {
   "name": "SurgeryWebsiteFrontEnd",
   "version": "1.0.0",
-  "description": "Front end Test again",
+  "description": "The surgery webby",
   "main": "index.js",
   "scripts": {
     "dev": "npm run lint && next src",

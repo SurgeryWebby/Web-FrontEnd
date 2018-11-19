@@ -5,10 +5,8 @@ import {
 } from 'semantic-ui-react';
 import WavyBannerSvg from '../common/WavyBannerSvg';
 
-// TODO Move to css maybe or styled components
 const { Column, Row } = Grid;
 
-// TODO Move to css maybe or styled components
 const gridStyle = {
     paddingTop: 0,
 };
