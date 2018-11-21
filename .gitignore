@@ -60,7 +60,12 @@ typings/
 # next.js build output
 .next
 
+# test coverage
+.coverage
+
 # tasks
 .vscode
 
 .DS_Store
+
+
