@@ -61,7 +61,10 @@ typings/
 .next
 
 # test coverage
-.coverage
+coverage
+
+# nyc output
+.nyc_output
 
 # tasks
 .vscode

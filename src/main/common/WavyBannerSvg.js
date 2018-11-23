@@ -8,7 +8,6 @@ const BannerWaveStyled = {
     height: '50%',
 };
 
-
 const WavyBannerSvg = () => (
     <div style={BannerWaveStyled}>
         <svg
