@@ -5,7 +5,7 @@ import {
 } from 'semantic-ui-react';
 import MessengerMessageUs from 'react-messenger-message-us';
 import FaqsAccordions from './FaqsAccordions';
-import Banner from '../common/banner/Banner';
+import Banner from '../common/Banner';
 import './index.css';
 
 const { Row } = Grid;

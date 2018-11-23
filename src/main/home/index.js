@@ -3,8 +3,8 @@ import 'semantic-ui-css/semantic.min.css';
 import {
     Container, Header, Image, Grid, Segment, Rail, Button,
 } from 'semantic-ui-react';
-import WavyBannerSvg from '../common/banner/WavyBannerSvg';
-import TopWavySvg from '../common/banner/TopWavySvg';
+import WavyBannerSvg from '../common/WavyBannerSvg';
+import TopWavySvg from '../common/TopWavySvg';
 import ServiceComponent from './service/ServiceComponent';
 import './index.css';
 

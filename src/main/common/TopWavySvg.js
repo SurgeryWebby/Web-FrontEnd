@@ -1,8 +1,17 @@
 import React from 'react';
-import './base.css';
+
+const TopWavySvgStyle = {
+    position: 'absolute',
+    overflow: 'hidden',
+    top: '-1px',
+    padding: '0 !important',
+    transform: 'rotate(180deg) !important',
+    width: '100% !important',
+    height: '30% !important',
+};
 
 const TopWavySvg = () => (
-    <div className="head-wave">
+    <div style={TopWavySvgStyle}>
         <svg
             viewBox="0 0 500 150"
             preserveAspectRatio="none"

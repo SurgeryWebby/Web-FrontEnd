@@ -3,7 +3,6 @@ import {
     Segment, Image, Rail, Header,
 } from 'semantic-ui-react';
 import WavyBannerSvg from './WavyBannerSvg';
-import './base.css';
 
 const HeaderStyle = {
     fontFamily: 'ButlerRegular',

@@ -3,12 +3,10 @@ import 'semantic-ui-css/semantic.min.css';
 import {
     Container, Header, Image, Grid, Rail, Segment,
 } from 'semantic-ui-react';
-import WavyBannerSvg from '../common/banner/WavyBannerSvg';
+import WavyBannerSvg from '../common/WavyBannerSvg';
 
-// TODO Move to css maybe or styled components
 const { Column, Row } = Grid;
 
-// TODO Move to css maybe or styled components
 const gridStyle = {
     paddingTop: 0,
 };
