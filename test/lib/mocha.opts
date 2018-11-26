@@ -1,3 +1,0 @@
---require @babel/register
---require ignore-styles
---file ./test/lib/mocha.setup.js
