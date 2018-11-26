@@ -58,16 +58,10 @@ typings/
 .env
 
 # next.js build output
-.next
-
-# test coverage
-coverage
+/*/**/.next
 
 # nyc output
 .nyc_output
-
-# tasks
-.vscode
 
 .DS_Store
 
