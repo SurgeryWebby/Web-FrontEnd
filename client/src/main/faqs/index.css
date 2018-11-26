@@ -1,0 +1,10 @@
+.faqs-content {
+    background: url("/static/images/faqs/bg.png");
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    background-size: 100%;
+    background-position: bottom;
+    min-height: 100vh;
+    font-family: 'Prompt';
+    font-size: 16px;
+}
