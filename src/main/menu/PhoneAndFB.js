@@ -7,6 +7,7 @@ const TopMenuContentStyle = {
     color: 'white',
 };
 
+
 const PhoneAndFB = () => (
     <List horizontal divided style={TopMenuContentStyle}>
         <List.Item>
