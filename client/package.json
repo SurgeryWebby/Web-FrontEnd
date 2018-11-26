@@ -1,0 +1,59 @@
+{
+  "name": "SurgeryWebsiteFrontEnd",
+  "version": "1.0.0",
+  "description": "The surgery webby",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run lint && next src",
+    "build": "npm run lint && next build src",
+    "start": "npm run lint && next build src && next start",
+    "lint": "eslint . --fix",
+    "test": "NODE_ENV=test mocha --opts ./test/lib/mocha.opts --recursive",
+    "coverage": "nyc --reporter=html --reporter=text npm test",
+    "export": "next export src",
+    "now-build": "next build src && next export src -o dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SurgeryWebby/Web-FrontEnd.git"
+  },
+  "keywords": [],
+  "author": "ppromsuban, minapapol",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/SurgeryWebby/Web-FrontEnd/issues"
+  },
+  "homepage": "https://github.com/SurgeryWebby/Web-FrontEnd#readme",
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "file-loader": "^2.0.0",
+    "next": "^7.0.2",
+    "react": "^16.5.2",
+    "react-messenger-message-us": "^0.1.0",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.83.0",
+    "url-loader": "^1.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/register": "^7.0.0",
+    "acorn-jsx": "^5.0.1",
+    "babel-eslint": "^10.0.1",
+    "chai": "^4.2.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "ignore-styles": "^5.0.1",
+    "istanbul": "^0.4.5",
+    "jsdom": "^13.0.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
+    "react-addons-test-utils": "^15.6.2",
+    "react-dom": "^16.6.3",
+    "sinon": "^7.1.1"
+  }
+}
