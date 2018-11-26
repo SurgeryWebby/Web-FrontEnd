@@ -4,14 +4,14 @@
   "description": "The surgery webby",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run lint && next src",
-    "build": "npm run lint && next build src",
-    "start": "npm run lint && next build src && next start",
+    "dev": "npm run lint && next",
+    "build": "npm run lint && next build",
+    "start": "npm run lint && next build && next start",
     "lint": "eslint . --fix",
     "test": "NODE_ENV=test mocha --opts ./test/lib/mocha.opts --recursive",
     "coverage": "nyc --reporter=html --reporter=text npm test",
-    "export": "next export src",
-    "now-build": "next build src && next export src -o dist"
+    "export": "next export",
+    "now-build": "next build && next export -o dist"
   },
   "repository": {
     "type": "git",
