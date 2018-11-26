@@ -63,6 +63,9 @@ typings/
 # nyc output
 .nyc_output
 
+# next
+./src/.next
+
 .DS_Store
 
 
