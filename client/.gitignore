@@ -58,7 +58,7 @@ typings/
 .env
 
 # next.js build output
-./src/.next
+.next
 
 # nyc output
 .nyc_output
