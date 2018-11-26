@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "nextjs",
+  "name": "surgery-webby",
   "builds": [
     {
       "src": "client/package.json",
