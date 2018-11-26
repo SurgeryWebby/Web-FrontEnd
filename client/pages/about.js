@@ -1,7 +1,7 @@
 import React from 'react';
-import MenuDefault from '../main/menu/index';
-import FooterDefault from '../main/footer/footer';
-import AboutComponent from '../main/about';
+import MenuDefault from '../src/main/menu/index';
+import FooterDefault from '../src/main/footer/footer';
+import AboutComponent from '../src/main/about';
 
 export default () => (
     <div>

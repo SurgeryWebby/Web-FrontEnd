@@ -1,7 +1,7 @@
 import React from 'react';
-import MenuDefault from '../main/menu/index';
-import FooterDefault from '../main/footer/footer';
-import BlogComponent from '../main/blogs/blog';
+import MenuDefault from '../src/main/menu/index';
+import FooterDefault from '../src/main/footer/footer';
+import BlogComponent from '../src/main/blogs/blog';
 
 export default () => (
     <div>
