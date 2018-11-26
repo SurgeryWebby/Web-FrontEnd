@@ -1,5 +1,5 @@
 import React from 'react';
-import MenuDefault from '../main/menu/menu';
+import MenuDefault from '../main/menu/index';
 import FooterDefault from '../main/footer/footer';
 import BlogComponent from '../main/blogs/blog';
 
