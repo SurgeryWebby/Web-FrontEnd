@@ -3,7 +3,7 @@
   "name": "surgerywebby",
   "builds": [
     {
-      "src": "./client/package.json",
+      "src": "client/package.json",
       "use": "@now/next"
     }
   ]
