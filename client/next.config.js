@@ -1,44 +1,20 @@
-const { PHASE_PRODUCTION_SERVER } = process.env.NODE_ENV === 'development' ? {} : require('next-server/constants');
+const withCSS = require('@zeit/next-css');
 
-module.exports = (phase, { defaultConfig }) => {
-    if (phase === PHASE_PRODUCTION_SERVER) {
-        return {
-            webpack: function(config) {
-                config.module.rules.push({
-                    test: /\.(png|svg|eot|otf|ttf|woff|woff2)$/,
-                    use: {
-                        loader: 'url-loader',
-                        options: {
-                            limit: 100000,
-                            publicPath: './',
-                            outputPath: 'static/',
-                            name: '[name].[ext]',
-                        },
-                    },
-                });
-
-                return config;
-            },
-        };
-    }
-
-    const withCSS = require('@zeit/next-css');
-    return withCSS({
-        webpack(config) {
-            config.module.rules.push({
-                test: /\.(png|svg|eot|otf|ttf|woff|woff2)$/,
-                use: {
-                    loader: 'url-loader',
-                    options: {
-                        limit: 100000,
-                        publicPath: './',
-                        outputPath: 'static/',
-                        name: '[name].[ext]',
-                    },
+module.exports = withCSS({
+    webpack(config) {
+        config.module.rules.push({
+            test: /\.(png|svg|eot|otf|ttf|woff|woff2)$/i,
+            use: {
+                loader: 'url-loader',
+                options: {
+                    limit: 8192,
+                    publicPath: './',
+                    outputPath: 'static/css/',
+                    name: '[name].[ext]',
                 },
-            });
+            },
+        });
 
-            return config;
-        },
-    });
-};
+        return config;
+    },
+});
