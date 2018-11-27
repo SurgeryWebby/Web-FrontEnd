@@ -1,7 +1,7 @@
 import React from 'react';
-import MenuDefault from '../main/menu/index';
-import FooterDefault from '../main/footer/footer';
-import FaqComponent from '../main/faqs';
+import MenuDefault from '../src/main/menu/index';
+import FooterDefault from '../src/main/footer/footer';
+import AboutComponent from '../src/main/about';
 
 export default () => (
     <div>
@@ -9,8 +9,8 @@ export default () => (
           @import url(`https://fonts.googleapis.com/css?family=Chonburi|Prompt`);
         </style>
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/butler" type="text/css" />
-        <MenuDefault activeItem="FAQ" />
-        <FaqComponent />
+        <MenuDefault activeItem="About Us" />
+        <AboutComponent />
         <FooterDefault />
     </div>
 );
