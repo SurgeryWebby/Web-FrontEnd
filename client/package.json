@@ -14,7 +14,6 @@
     "now-build": "next build && next export -o dist"
   },
 
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SurgeryWebby/Web-FrontEnd.git"
