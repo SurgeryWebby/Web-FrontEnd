@@ -1,5 +1,16 @@
 {
-  "github": {
-    "enabled": "false"
-  }
+  "version": 2,
+  "name": "surgerywebby",
+  "builds": [
+    {
+      "src": "client/package.json",
+      "use": "@now/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/client/$1"
+    }
+  ]
 }
