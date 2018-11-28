@@ -2,7 +2,9 @@ node_modules
 test
 .next
 .gitignore
-README.md# Elastic Beanstalk Files
+README.md
 .elasticbeanstalk/*
 .git
 .gitignore
+Dockerfile
+Dockerrun.aws.json
