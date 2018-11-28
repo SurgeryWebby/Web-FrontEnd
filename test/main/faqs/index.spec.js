@@ -16,12 +16,11 @@ describe('FaqsComponent', () => {
                 imagePath="/static/images/about/banner-background.png"
             />
         )
-        const expectedAccordions = (<FaqsAccordions />);
         const expectedMessageButton = (<MessengerMessageUs pageId="334368506922347" appId="1371080042903307" />);
         const expectedPhonenumberDetail = (<p>หรือโทร 02-123-4567</p>);
 
         expect(wrapper.contains(expectedBanner)).to.equal(true);
-        expect(wrapper.contains(expectedAccordions)).to.equal(true);
+        expect(wrapper.contains(<FaqsAccordions />)).to.equal(true);
         expect(wrapper.contains(expectedMessageButton)).to.equal(true);
         expect(wrapper.contains(expectedPhonenumberDetail)).to.equal(true);
     });
