@@ -8,6 +8,9 @@
       "repo": "940710467677.dkr.ecr.ap-southeast-1.amazonaws.com",
       "image": "surgerywebby-frontend",
       "region": "ap-southeast-1"
+    },
+    "beanstalk": {
+      "name": "surgerywebby-frontend"
     }
   },
   "scripts": {
@@ -24,7 +27,10 @@
     "docker:login": "eval $(aws ecr get-login --no-include-email --region $npm_package_config_docker_region)",
     "docker:tag": "docker tag $npm_package_config_docker_image $npm_package_config_docker_repo/$npm_package_config_docker_image:$npm_package_version",
     "docker:push": "docker push $npm_package_config_docker_repo/$npm_package_config_docker_image:$npm_package_version",
-    "docker:publish": "npm run docker:build && npm run docker:tag && npm run docker:login && npm run docker:push"
+    "docker:publish": "npm run docker:build && npm run docker:tag && npm run docker:login && npm run docker:push",
+    "deploy:terminate": "eb terminate $npm_package_config_beanstalk_name <<< $npm_package_config_beanstalk_name",
+    "deploy:create": "eb create $npm_package_config_beanstalk_name",
+    "deploy": "npm run deploy:terminate && npm run deploy:create"
   },
   "repository": {
     "type": "git",

@@ -2,3 +2,7 @@ node_modules
 test
 .next
 .gitignore
+README.md# Elastic Beanstalk Files
+.elasticbeanstalk/*
+.git
+.gitignore
