@@ -3,6 +3,13 @@
   "version": "1.0.0",
   "description": "The surgery webby",
   "main": "index.js",
+  "config": {
+    "docker": {
+      "repo": "940710467677.dkr.ecr.ap-southeast-1.amazonaws.com",
+      "image": "surgerywebby-frontend",
+      "region": "ap-southeast-1"
+    }
+  },
   "scripts": {
     "dev": "npm run lint && next",
     "build": "npm run lint && next build",
@@ -11,7 +18,13 @@
     "test": "NODE_ENV=test mocha --opts ./test/lib/mocha.opts --recursive",
     "coverage": "nyc --reporter=html --reporter=text npm test",
     "export": "next export",
-    "now-build": "next build && next export -o dist"
+    "now-build": "next build && next export -o dist",
+    "docker:build": "docker build -t $npm_package_config_docker_image:$npm_package_version -t $npm_package_config_docker_image:latest .",
+    "docker:start": "docker run -p 80:3000 $npm_package_config_docker_image",
+    "docker:login": "eval $(aws ecr get-login --no-include-email --region $npm_package_config_docker_region)",
+    "docker:tag": "docker tag $npm_package_config_docker_image $npm_package_config_docker_repo/$npm_package_config_docker_image:$npm_package_version",
+    "docker:push": "docker push $npm_package_config_docker_repo/$npm_package_config_docker_image:$npm_package_version",
+    "docker:publish": "npm run docker:build && npm run docker:tag && npm run docker:login && npm run docker:push"
   },
   "repository": {
     "type": "git",
