@@ -5,7 +5,18 @@ jobs:
       - image: circleci/node:10.12.0
     steps:
       - checkout
-      - run: npm -v
+      - run:
+        name: Lint Frontend
+        shell: /bin/bash
+        working_directory: ~/Web-FrontEnd/client
+        command: npm run lint
+        no_output_timeout: 5m
+      - run:
+        name: Frontend Unit Test
+        shell: /bin/bash
+        working_directory: ~/Web-FrontEnd/client
+        command: npm run test
+        no_output_timeout: 5m
 workflows:
   version: 2
   frontend:
