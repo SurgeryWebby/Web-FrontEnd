@@ -7,7 +7,6 @@ jobs:
       - checkout
       - run:
           name: Lint Frontend
-          shell: /bin/bash
           working_directory: ~/Web-FrontEnd/client
           command: ls
       - run:
