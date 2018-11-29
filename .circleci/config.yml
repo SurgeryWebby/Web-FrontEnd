@@ -7,12 +7,12 @@ jobs:
       - checkout
       - run:
           name: Lint Frontend
-          working_directory: ~/Web-FrontEnd/client
-          command: npm install
+          working_directory: ~/project/client
+          command: npm install && npm run lint
       - run:
           name: Frontend Unit Test
           shell: /bin/bash
-          working_directory: ~/Web-FrontEnd/client
+          working_directory: ~/project/client
           command: npm run test
 workflows:
   version: 2
