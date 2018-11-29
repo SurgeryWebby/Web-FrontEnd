@@ -8,6 +8,6 @@ jobs:
       - run: echo "A first Hello"
 workflows:
   version: 2
-    frontend:
-      jobs:
-        - frontend-unit-test
+  frontend:
+    jobs:
+      - frontend-unit-test
