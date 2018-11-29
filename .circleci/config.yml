@@ -8,7 +8,7 @@ jobs:
       - run:
           name: Lint Frontend
           working_directory: ~/Web-FrontEnd/client
-          command: ls
+          command: npm install
       - run:
           name: Frontend Unit Test
           shell: /bin/bash
