@@ -1,0 +1,21 @@
+version: 2
+jobs:
+  frontend-unit-test:
+    docker:
+      - image: circleci/node:10.12.0
+    steps:
+      - checkout
+      - run:
+          name: Lint Frontend
+          working_directory: ~/project/client
+          command: npm install && npm run lint
+      - run:
+          name: Frontend Unit Test
+          shell: /bin/bash
+          working_directory: ~/project/client
+          command: npm run test
+workflows:
+  version: 2
+  frontend:
+    jobs:
+      - frontend-unit-test

@@ -1,0 +1,10 @@
+node_modules
+test
+.next
+.gitignore
+README.md
+.elasticbeanstalk/*
+.git
+.gitignore
+Dockerfile
+Dockerrun.aws.json
